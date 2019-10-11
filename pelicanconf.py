@@ -82,7 +82,8 @@ PLUGINS = [
     'sitemap', # generate sitemap document, see <https://www.sitemaps.org>
     'post_stats', # generate post statistics
     'related_posts', # find articles those share common tags
-    'neighbors' # find next, previous article 
+    'neighbors', # find next, previous article 
+    'share_post', # static sharing buttons
 ]
 
 SITEMAP = {
@@ -145,7 +146,8 @@ SOCIAL = {
 DISQUS_SITENAME = "vuquangtrong-github-io"
 
 # Sharing
-ADD_THIS_ID = "ra-5d9ffca0db80069e"
+SHARE_POST = True # old style and static sharing buttons for articles, use AddThis for tracking purpose
+ADD_THIS_ID = "ra-5d9ffca0db80069e" # can be on index, any article or page, and can track user activities
 
 # Tracking and Ads
 GOOGLE_ANALYTICS = "UA-42618265-2" # old method

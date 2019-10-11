@@ -98,7 +98,7 @@ a:hover {
 }
 
 .pagination {
-    display: block;
+    display: flow-root;
 }
 
 .footnote {
