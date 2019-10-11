@@ -133,7 +133,8 @@ MARKDOWN = {
 SOCIAL = {
 	'facebook': 'https://facebook.com/trongvq',
     'github': 'https://github.com/vuquangtrong',
-    'twitter': '#',
+    'linkedin': 'https://www.linkedin.com/in/vqtrong',
+    'twitter': 'https://twitter.com/trongvq',
 }
 
 # Site validation
