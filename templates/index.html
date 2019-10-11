@@ -18,21 +18,20 @@
     {% for article in articles_page.object_list %}
         <div class="card mb-2 shadow-sm">
             <div class="card-body">
-                <h5 class="card-title">
+                <h5 class="card-title" style="margin-bottom: 0;">
                     <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
                 </h5>
+                <span class="small">by <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>, post on <span class="text-success">{{ article.locale_date }}</span></span>
                 <p>{{ article.summary }}</p>
                 <div class="flex-row mx-auto mt-3 small">
                     <div class="float-left">
-                        <a href="{{ SITEURL }}/{{ article.author.url }}" class="card-link">{{ article.author }}</a>
-                        <span class="card-link text-success">{{ article.locale_date }}</span>
                         {% if article.stats %}
-                            <span class="card-link text-secondary" title="~{{ article.stats['wc'] }} words">~{{ article.stats['read_mins'] }} mins</span>
+                            <span class="card-link text-secondary" title="~{{ article.stats['wc'] }} words">Read in {{ article.stats['read_mins'] }} mins</span>
                         {% elif article.readtime %}
-                            <span class="card-link text-secondary" title="Read time">{{ article.readtime }}</span>
+                            <span class="card-link text-secondary" title="Read time">Read in {{ article.readtime }}</span>
                         {% endif %}
                         {% if DISQUS_SITENAME %}
-                            <span class="card-link text-info disqus-comment-count" data-disqus-url="{{ SITEURL }}/{{ article.url }}">-</span>
+                            <span class="card-link"><a href="{{ SITEURL }}/{{ article.url }}#disqus_thread"></a></span>
                         {% endif %}
                     </div>
                     <div class=" float-right">

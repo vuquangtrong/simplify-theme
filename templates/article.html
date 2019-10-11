@@ -29,7 +29,7 @@
                     </span>
                 </span>
                 {% if article.stats %}
-                    <span class="card-link text-secondary" title="~{{ article.stats['wc'] }} words">~{{ article.stats['read_mins'] }} min read</span>
+                    <span class="card-link text-secondary" title="~{{ article.stats['wc'] }} words">{{ article.stats['read_mins'] }} mins</span>
                 {% elif article.readtime %}
                     <span class="card-link text-secondary" title="Read time">{{ article.readtime }}</span>
                 {% endif %}
@@ -55,7 +55,6 @@
 
                 {% if ADD_THIS_ID and (page_name or page or article) %}
                     <div class="text-right mb-2 small">
-                        <p>Share with your friends!</p>
                         <div class="addthis_inline_share_toolbox"></div>
                     </div>
                 {% endif %}
