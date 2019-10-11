@@ -116,14 +116,8 @@
         {% endif %}
 
         <!-- Google Adsense -->
-        {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.page_level_ads %}
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({
-                    google_ad_client: "{{ GOOGLE_ADSENSE.ca_id }}",
-                    enable_page_level_ads: true
-                });
-            </script>
+        {% if GOOGLE_ADSENSE_ID %}
+            {% include "include/gads.html" %}
         {% endif %}
 
         <!-- Heap Analytic -->
@@ -246,15 +240,6 @@
     <main class="flex-shrink-0 flex-grow-1 py-3">
         {% block main %}
             <div class="container">
-                <!-- Google Adsense -->
-                {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.article_top %}
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins class="adsbygoogle ads-responsive" data-ad-client="{{ GOOGLE_ADSENSE.ca_id }}" data-ad-slot="{{ GOOGLE_ADSENSE.ads.article_top }}"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                {% endif %}
-
                 <!-- Sharing -->
                 {% block add_this %}
                 {% if ADD_THIS_ID and (page_name or page or article) %}
@@ -267,15 +252,6 @@
                 <!-- Content -->
                 {% block content %}
                 {% endblock content %}
-
-                <!-- Google Adsense -->
-                {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.index_bottom %}
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins class="adsbygoogle ads-responsive" data-ad-client="{{ GOOGLE_ADSENSE.ca_id }}" data-ad-slot="{{ GOOGLE_ADSENSE.ads.index_bottom }}"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                {% endif %}
             </div>
         {% endblock main %}
     </main>

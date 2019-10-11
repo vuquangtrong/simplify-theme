@@ -81,7 +81,8 @@ PLUGIN_PATHS = [
 PLUGINS = [
     'sitemap', # generate sitemap document, see <https://www.sitemaps.org>
     'post_stats', # generate post statistics
-    'related_posts'
+    'related_posts', # find articles those share common tags
+    'neighbors' # find next, previous article 
 ]
 
 SITEMAP = {
@@ -147,21 +148,25 @@ ADD_THIS_ID = "ra-5d9ffca0db80069e"
 
 # Tracking and Ads
 GOOGLE_ANALYTICS = "UA-42618265-2" # old method
-# GOOGLE_SITE_TAG = "UA-42618265-2"
+# GOOGLE_SITE_TAG = "UA-42618265-2" # new method to use with Tag Manager
 # GOOGLE_TAG_MANAGER = ""
-# GOOGLE_ADSENSE = {
-#     'ca_id': '',
-#     'page_level_ads': False,
-#     'ads': {
-#         'aside': '',
-#         'main_menu': '',
-#         'index_top': '',
-#         'index_bottom': '',
-#         'article_top': '',
-#         'article_bottom': '',
-#     }
-# }
+
+GOOGLE_ADSENSE_ID = 'ca-pub-9105473411342324'
+
+GOOGLE_ADSENSE_CONFIG = {
+    'page_level_ads': False,
+    'ads': {
+        'aside': '',
+        'main_menu': '',
+        'index_top': '',
+        'index_bottom': '',
+        'article_top': '',
+        'article_bottom': '',
+    }
+}
+
 # HEAP_ANALYTICS = ""
+
 # PIWIK_SITE_ID = ""
 # PIWIK_URL = ""
 # PIWIK_SSL_URL = ""

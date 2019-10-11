@@ -10,7 +10,7 @@ Source code [simplify-bootstrap-theme](https://github.com/vuquangtrong/simplify-
 - SEO ready
 - Multiple layouts
 - Table of Content sidebar
-- Realted posts
+- Realted posts, next/previous article
 - Social Sharing 
 - Comments
 - Rich Snippets (JSON-LD)
@@ -34,6 +34,7 @@ You may need to check the included example `pelicanconf.py` and `publishconf.py`
 - [sitemap](https://github.com/getpelican/pelican-plugins/tree/master/sitemap): generate sitemap document, see <https://www.sitemaps.org>
 - [post_stats](https://github.com/getpelican/pelican-plugins/tree/master/post_stats): generate post statistics: words, estimated read time, tag cloud
 - [related_posts](https://github.com/getpelican/pelican-plugins/tree/master/related_posts): find relate posts to the reading article
+- [neighbors](https://github.com/getpelican/pelican-plugins/tree/master/neighbors): find next/preivious article
 
 ### Markdown extensions
 By default Pelican enables below extensions to process your markdown files:
