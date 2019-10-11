@@ -27,9 +27,12 @@
                         <a href="{{ SITEURL }}/{{ article.author.url }}" class="card-link">{{ article.author }}</a>
                         <span class="card-link text-success">{{ article.locale_date }}</span>
                         {% if article.stats %}
-                            <span class="card-link text-secondary" title="~{{ article.stats['wc'] }} words">~{{ article.stats['read_mins'] }} min read</span>
+                            <span class="card-link text-secondary" title="~{{ article.stats['wc'] }} words">~{{ article.stats['read_mins'] }} mins</span>
                         {% elif article.readtime %}
                             <span class="card-link text-secondary" title="Read time">{{ article.readtime }}</span>
+                        {% endif %}
+                        {% if DISQUS_SITENAME %}
+                            <span class="card-link text-info disqus-comment-count" data-disqus-url="{{ SITEURL }}/{{ article.url }}">-</span>
                         {% endif %}
                     </div>
                     <div class=" float-right">
@@ -48,3 +51,9 @@
         {% include "include/pagination.html" %}
     {% endif %}
 {% endblock content %}
+
+{% block disqus_count %}
+    {% if DISQUS_SITENAME %}
+        {% include "include/disqus_count.html" %}
+    {% endif %}
+{% endblock disqus_count %}

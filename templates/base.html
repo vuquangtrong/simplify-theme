@@ -312,8 +312,17 @@
     {% endif %}
 
     <!-- JSON LD -->
-    {% include "include/jsonld.html" %}
+    {% block jsonld %}
+        {% if article %}
+            {% include "include/jsonld_article.html" %}
+        {% else %}
+            {% include "include/jsonld.html" %}
+        {% endif %}
+    {% endblock jsonld %}
 
+    <!-- Disqus count -->
+    {% block disqus_count %}
+    {% endblock disqus_count %}
 </body>
 
 </html>

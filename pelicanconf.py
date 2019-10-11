@@ -140,7 +140,7 @@ SOCIAL = {
 # CLAIM_BING = ""
 
 # Comments
-DISQUS_SITENAME = "https://vuquangtrong-github-io.disqus.com"
+DISQUS_SITENAME = "vuquangtrong-github-io"
 
 # Sharing
 ADD_THIS_ID = "ra-5d9ffca0db80069e"
