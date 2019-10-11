@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block meta %}
+    <meta name="author" content="{{ article.author.name }}" />
+    <meta name="description" content="{{ article.summary|striptags|escape }}" />
+    <meta name="keywords" content="{{ article.tags|join(', ')|escape }}">
+    {% include "include/og_article.html" %}
+{% endblock meta%}
+
+{% block title %}
+    {{ article.title|striptags|escape }} &ndash; {{ SITENAME }}
+{% endblock title %}
+
+{% block header %}
+	<div class="container">
+		<h3 id="{{ article.slug }}">{{ article.title }}</h1>
+		<p style="font-size:larger;">{{ article.summary }}</p>
+        <div class="flex-row mx-auto mt-3">
+            <div class="float-left">
+                <a href="{{ SITEURL }}/{{ article.author.url }}" class="card-link">{{ article.author }}</a>
+                <span class="card-link text-success">
+                    <span class="post-date" title="Post date">{{ article.locale_date }}</span>
+                    <span class="text-info modified-date" title="Updated date">
+                        {% if article.modified %}
+                            {{ article.locale_modified }}
+                        {% else %}
+                            {{ article.locale_date }}
+                        {% endif %}
+                    </span>
+                </span>
+                {% if article.stats %}
+                    <span class="card-link text-secondary" title="~{{ article.stats['wc'] }} words">~{{ article.stats['read_mins'] }} min read</span>
+                {% elif article.readtime %}
+                    <span class="card-link text-secondary" title="Read time">{{ article.readtime }}</span>
+                {% endif %}
+            </div>
+            <div class=" float-right">
+                <a class="badge badge-success" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category|lower }}</a>
+                {% for tag in article.tags %}
+                    <a class="badge badge-info" href="{{ SITEURL }}/{{ tag.url }}">{{ tag|lower }}</a>
+                {% endfor %}
+            </div>
+        </div>
+	</div>
+{% endblock header %}
+
+{% block content %}
+    {% if article.toc == 'show' %}
+        <div class="row">
+            <!-- Article -->
+            <div class="col-xs-12 col-sm-12 col-md-9">
+                {% block add_this %}
+                {# remove ADD_THIS in content, move to inner column #}
+                {% endblock add_this %}
+
+                {% if ADD_THIS_ID and (page_name or page or article) %}
+                    <div class="text-right mb-2 small">
+                        <p>Share with your friends!</p>
+                        <div class="addthis_inline_share_toolbox"></div>
+                    </div>
+                {% endif %}
+
+                {{ article.content }}
+            </div>
+
+            <!-- ToC -->
+            <div class="col-md-3 d-none d-md-block small">
+                <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+            </div>
+        </div>
+    {% else %}
+        <!-- Article -->
+        <div>
+            {{ article.content }}
+        </div>
+    {% endif %}
+
+    <!-- Releated posts -->
+    {% if article.related_posts %}
+        <hr>
+        <div>
+            <h5>Related posts:</h5>
+            <ul>
+            {% for related_post in article.related_posts %}
+                <li><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <!-- Comments -->
+    {% if DISQUS_SITENAME %}
+        {% include "include/disqus.html" %}
+    {% endif %}
+{% endblock content %}

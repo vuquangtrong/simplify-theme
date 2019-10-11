@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% if page.lang %}
+    {% block html_lang %}{{ page.lang }}{% endblock html_lang %}
+{% endif %}
+
+{% block title %}
+    {{ page.title }} &ndash; {{ SITENAME }}
+{% endblock title %}
+
+{% block header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h3 id="{{ page.title }}" style="color: orange;">{{ page.title }}</h3>
+                {% if page.modified %}
+                    <p class="text-light">Last updated: {{ page.locale_modified }}</p>
+                {% else %}
+                    <p class="text-light">Post on: {{ page.locale_date }}</p>
+                {% endif %}
+            </div>
+            <div class="col-4 small" style="margin-top: 0.5rem;">
+                {% if ADD_THIS_ID and (page_name or page or article) %}
+                    <div class="text-right mb-2 small">
+                        <div class="addthis_inline_share_toolbox"></div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock header %}
+
+{% block add_this %}
+{# remove ADD_THIS in content, move to above header #}
+{% endblock add_this %}
+
+{% block content %}
+    {{ page.content }}
+{% endblock content %}

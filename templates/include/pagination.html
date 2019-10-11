@@ -1,0 +1,12 @@
+<div class="pagination px-2">
+    {% if articles_page.has_next() %}
+    <a class="float-left" href="{{ SITEURL }}/{{ articles_next_page.url }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="margin-top: -3px;"><path d="M4 2v20h-2v-20h2zm18 0l-16 10 16 10v-20z" fill="currentColor"></path></svg> Older Posts
+    </a>
+    {% endif %}
+    {% if articles_page.has_previous() %}
+    <a class="float-right" href="{{ SITEURL }}/{{ articles_previous_page.url }}">
+        Newer Posts <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" transform='rotate(180)' viewBox="0 0 24 24" style="margin-top: -3px;"><path d="M4 2v20h-2v-20h2zm18 0l-16 10 16 10v-20z" fill="currentColor"></path></svg>
+    </a>
+    {% endif %}
+</div>

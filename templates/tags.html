@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Tags &ndash; {{ SITENAME }}
+{% endblock title %}
+
+{% block header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h3 id="Tags in {{ SITENAME }}" style="color: orange;">Tags in {{ SITENAME }}</h3>
+            </div>
+            <div class="col-4 small" style="margin-top: 0.5rem;">
+                {% if ADD_THIS_ID and (page_name or page or article) %}
+                    <div class="text-right mb-2 small">
+                        <div class="addthis_inline_share_toolbox"></div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock header %}
+
+{% block add_this %}
+{# remove ADD_THIS in content, move to above header #}
+{% endblock add_this %}
+
+{% block content %}
+	<div class="text-center">
+		{% for tag, articles in tags|sort %}
+			<a class="btn btn-info btn-sm" href="{{ SITEURL }}/{{ tag.url }}">
+			  {{ tag|lower }}  <span class="badge badge-light" style="font-size: small;">{{ articles|count }}</span>
+			</a>
+		{% endfor %}
+	</div>
+{% endblock content %}

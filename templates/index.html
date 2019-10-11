@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block meta %}
+    <meta name="author" content="{{ AUTHOR }}" />
+    <meta name="description" content="{{ SITEDESCRIPTION }}" />
+    {% include "include/og.html" %}
+{% endblock %}
+
+{% block header %}
+    <div class="container">
+        <h1 id="{{ SITENAME }}">{{ SITENAME }}</h1>
+        <p style="font-size: larger; color: orange;">{{ SITEDESCRIPTION }}</p>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <!-- List of article -->
+    {% for article in articles_page.object_list %}
+        <div class="card mb-2 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                </h5>
+                <p>{{ article.summary }}</p>
+                <div class="flex-row mx-auto mt-3 small">
+                    <div class="float-left">
+                        <a href="{{ SITEURL }}/{{ article.author.url }}" class="card-link">{{ article.author }}</a>
+                        <span class="card-link text-success">{{ article.locale_date }}</span>
+                        {% if article.stats %}
+                            <span class="card-link text-secondary" title="~{{ article.stats['wc'] }} words">~{{ article.stats['read_mins'] }} min read</span>
+                        {% elif article.readtime %}
+                            <span class="card-link text-secondary" title="Read time">{{ article.readtime }}</span>
+                        {% endif %}
+                    </div>
+                    <div class=" float-right">
+                        <a class="badge badge-success" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category|lower }}</a>
+                        {% for tag in article.tags %}
+                            <a class="badge badge-info" href="{{ SITEURL }}/{{ tag.url }}">{{ tag|lower }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    <!-- Pagination -->
+    {% if DEFAULT_PAGINATION %}
+        {% include "include/pagination.html" %}
+    {% endif %}
+{% endblock content %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Archives &ndash; {{ SITENAME }}
+{% endblock title %}
+
+{% block header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h3 id="Archives in {{ SITENAME }}" style="color: orange;">Archives in {{ SITENAME }}</h3>
+            </div>
+            <div class="col-4 small" style="margin-top: 0.5rem;">
+                {% if ADD_THIS_ID and (page_name or page or article) %}
+                    <div class="text-right mb-2 small">
+                        <div class="addthis_inline_share_toolbox"></div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock header %}
+
+{% block add_this %}
+{# remove ADD_THIS in content, move to above header #}
+{% endblock add_this %}
+
+{% block content %}
+    <div>
+        <dl>
+            {% for article in dates %}
+                <dt>{{ article.locale_date }}</dt>
+                <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+            {% endfor %}
+        </dl>
+    </div>
+{% endblock content %}
