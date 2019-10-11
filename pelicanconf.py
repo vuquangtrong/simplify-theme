@@ -167,6 +167,8 @@ GOOGLE_ADSENSE_CONFIG = {
 
 # HEAP_ANALYTICS = ""
 
+MATOMO_SITENAME = 'vuquangtronggithubio' # new site of PIWIK
+
 # PIWIK_SITE_ID = ""
 # PIWIK_URL = ""
 # PIWIK_SSL_URL = ""

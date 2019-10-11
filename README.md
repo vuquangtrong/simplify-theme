@@ -27,7 +27,7 @@ You may need to check the included example `pelicanconf.py` and `publishconf.py`
 - [Google AdSense](https://www.google.com.br/adsense/start/): show ads
 - [Google Analytics](https://www.google.com/analytics/web/): track your site
 - [Google Tag Manager](https://www.google.com/tagmanager/): new version to track your site
-- [Piwik Analytics](http://piwik.org/): another site tracking service
+- [Matomo](https://matomo.org): formerly [Piwik Analytics](http://piwik.org/): another site tracking service
 
 ### Plugins Support
 
