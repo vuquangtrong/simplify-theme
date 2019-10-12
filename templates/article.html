@@ -45,6 +45,7 @@
 {% endblock header %}
 
 {% block content %}
+    <!-- 2 columns layout -->
     {% if article.toc == 'show' %}
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-10">
@@ -101,6 +102,13 @@
             </div>
         </div>
     {% else %}
+    <!-- single column layout -->
+        <!-- Sharing -->
+        {% if ADD_THIS_ID and (page_name or page or article) %}
+            <div class="text-right mb-2 small">
+                <div class="addthis_inline_share_toolbox"></div>
+            </div>
+        {% endif %}
 
         <!-- Share post -->
         {% if article.share_post and article.status != 'draft' %}

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from datetime import datetime
 
 # Site info
 AUTHOR = 'vuquangtrong'
@@ -11,6 +12,7 @@ SITETITLE = 'Simplify'
 SITESUBTITLE = 'A simple theme for blog, powered by Bootstrap and Pelican'
 SITEDESCRIPTION = 'A simple theme for blog, powered by Bootstrap and Pelican'
 SITELOGO = 'logo.png'
+COPYRIGHT_YEAR = datetime.now().year
 
 # when developing: don't specify URL, use document-relative URLs 
 SITEURL = ''
@@ -43,11 +45,13 @@ DIRECT_TEMPLATES = [
     'categories', 
     'tags', 
     'archives', 
-    '404'
+    '404',
+    'search',
 ]
 
+# below pages are not included in the theme, but you want to customize them in html and layout
 TEMPLATE_PAGES = {
-    'pages/test.html': 'test.html'
+    'pages/test.html': 'pages/test.html'
 }
 
 DEFAULT_PAGINATION = 10
@@ -84,6 +88,7 @@ PLUGINS = [
     'related_posts', # find articles those share common tags
     'neighbors', # find next, previous article 
     'share_post', # static sharing buttons
+    'tipue_search', # generate data for searching
 ]
 
 SITEMAP = {

@@ -87,17 +87,20 @@
         <!--
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/css/bootstrap.min.css">
         -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/bootstrap.min.css">
         <!--
         <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css">
         -->
         {% if article and article.toc == 'show' %}
-            <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap-toc.min.css">
+            <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/extra/bootstrap-toc.min.css">
         {% endif %}
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/friendly.min.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/pygment/friendly.min.css">
         <!--
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/admonition.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/extra/admonition.css">
         -->
+        {% if page_name == 'search' %}
+            <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.css">
+        {% endif %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style.css">
 
         <!-- Google Analytics -->
@@ -201,10 +204,12 @@
                 </li>
             </ul>
 
+            {% if page_name != 'search' %}
             <!-- Search form -->
-            <form class="form-inline border-bottom text-center">
-                <input class="form-control w-100 bg-dark text-light text-center border-0 p-2" type="text" placeholder="Search" aria-label="Search">
+            <form class="form-inline text-center" action="{{ SITEURL }}/search.html">
+                <input class="form-control w-100 bg-dark text-light text-center border-0 p-2" type="text" name="q" pattern=".{3,}" title="At least 3 characters" required="" placeholder="Type here to search" aria-label="Search">
             </form>
+            {% endif %}
 
             <!-- Social links -->
             <ul class="navbar-nav text-center">
@@ -244,36 +249,44 @@
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="flex-shrink-0 bg-dark text-light shadow-sm pt-3 pb-2">
-        {% block header %}{% endblock header %}
-    </header>
+    <!-- Full page -->
+    <div class="flex-shrink-0 flex-grow-1">
+    {% block page %}
 
-    <!-- Main -->
-    <main class="flex-shrink-0 flex-grow-1 py-3">
-        {% block main %}
-            <div class="container">
-                <!-- Sharing -->
-                {% block add_this %}
-                {% if ADD_THIS_ID and (page_name or page or article) %}
-                    <div class="text-right mb-2 small">
-                        <div class="addthis_inline_share_toolbox"></div>
-                    </div>
-                {% endif %}
-                {% endblock add_this %}
+        <!-- Header -->
+        <header class="bg-dark text-light shadow-sm pt-3 pb-2" style="display: flow-root;">
+            {% block header %}{% endblock header %}
+        </header>
 
-                <!-- Content -->
-                {% block content %}
-                {% endblock content %}
-            </div>
-        {% endblock main %}
-    </main>
+        <!-- Main -->
+        <main class="py-3">
+            {% block main %}
+                <div class="container">
+                    <!-- Sharing -->
+                    {% block add_this %}
+                    {% if ADD_THIS_ID and (page_name or page or article) %}
+                        <div class="text-right mb-2 small">
+                            <div class="addthis_inline_share_toolbox"></div>
+                        </div>
+                    {% endif %}
+                    {% endblock add_this %}
+
+                    <!-- Content -->
+                    {% block content %}
+                    {% endblock content %}
+                </div>
+            {% endblock main %}
+        </main>
+
+    {% endblock page %}
+    </div>
 
     <!-- Footer -->
     <footer class="flex-shrink-0 bg-dark text-light small py-1">
         <div class="container text-center">
-            <a href="{{ SITEURL}}">{{ SITENAME }}</a> is a personal blog created and maintained by <a href="{{ SITEURL }}/about.html">vuquangtrong</a>.<br>
-            Powered by <a href="http://getpelican.com">Pelican</a>, <a href="http://python.org">Python</a>, <a href="https://getbootstrap.com">Bootstrap 4</a>.
+            &copy; {{ COPYRIGHT_YEAR }} <a href="{{ SITEURL}}">{{ SITENAME }}</a> by <a href="{{ SITEURL }}/pages/about.html">{{ AUTHOR }}</a>. Powered by <a href="http://getpelican.com">Pelican</a>, <a href="http://python.org">Python</a>, <a href="https://getbootstrap.com">Bootstrap 4</a><br>
+            <!-- Do not remove below license sentence -->
+            License: <a href="https://spdx.org/licenses/CC-BY-4.0.html">CC-BY-4.0</a>, based on <a href="https://github.com/vuquangtrong/simplify-bootstrap-theme">Simplify Bootstrap Theme</a>
         </div>
     </footer>
 
@@ -281,16 +294,26 @@
     <!--
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     -->
-    <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/jquery-3.4.1.slim.min.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/jquery/jquery-3.4.1.min.js"></script>
     <!--
     <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/bootstrap.min.js"></script>
     -->
-    <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/bootstrap.min.js"></script>
     <!--
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
     -->
     {% if article and article.toc == 'show' %}
-        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap-toc.min.js"></script>
+        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/extra/bootstrap-toc.min.js"></script>
+    {% endif %}
+    {% if page_name == 'search' %}
+        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.js"></script>
+        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch_set.js"></script>
+        <script src="{{ SITEURL }}//tipuesearch_content.js"></script>
+        <script>
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+        </script>
     {% endif %}
     <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style.js"></script>
 

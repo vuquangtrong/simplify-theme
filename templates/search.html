@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Search &ndash; {{ SITENAME }}
+{% endblock title %}
+
+{% block header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h3 id="Search in {{ SITENAME }}" style="color: orange;">Search in {{ SITENAME }}</h3>
+            </div>
+            <div class="col-4 small" style="margin-top: 0.5rem;">
+                {% if ADD_THIS_ID and (page_name or page or article) %}
+                    <div class="text-right mb-2 small">
+                        <div class="addthis_inline_share_toolbox"></div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock header %}
+
+{% block add_this %}
+{# remove ADD_THIS in content, move to above header #}
+{% endblock add_this %}
+
+{% block content %}
+    <form>
+        <div class="tipue_search_group">
+            <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required>
+            <button type="submit" class="tipue_search_button">
+                <div class="tipue_search_icon">&#9906;</div>
+            </button>
+        </div>
+    </form>
+
+    <div id="tipue_search_content"></div>
+{% endblock content %}

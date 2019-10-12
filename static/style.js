@@ -1,6 +1,7 @@
 /*! 
  * Theme for Simplify blog
- * vuquangtrong.github.io */
+ * vuquangtrong.github.io 
+ */
 
 /* function to add line number into codeblock */
 /*

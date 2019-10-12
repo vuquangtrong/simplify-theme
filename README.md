@@ -10,6 +10,7 @@ Source code [simplify-bootstrap-theme](https://github.com/vuquangtrong/simplify-
 ### Features
 
 - Responsive layout for mobile and desktop
+- Quick Search
 - OpenGraph support
 - SEO ready
 - Table of Content sidebar
@@ -74,5 +75,5 @@ If you find any issues, or have a suggestion, then please open an [issue][].
 ### License
 
 Simplify is released under the [Creative Commons Attribution 4.0 International](https://spdx.org/licenses/CC-BY-4.0.html) license.
-All contributors will be listed in [Authors](AUTHORS.md) page. It'd be imcomplete but it is to honor in all they did.
-I would like you to have some words to refer to authors work in your page's footer. Thank you in advanced! 
+All contributors will be listed in [Authors](AUTHORS.md) page. It maybe imcomplete but it is to honor in all they did.
+I would like you to **have some words to refer to authors work in your page's footer**. Thank you in advanced!
