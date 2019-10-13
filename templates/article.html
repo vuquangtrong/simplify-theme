@@ -13,7 +13,7 @@
 
 {% block header %}
 	<div class="container">
-		<h3 id="{{ article.slug }}">{{ article.title }}</h1>
+		<h3 id="{{ article.slug }}">{{ article.title }}</h3>
 		<p style="font-size:larger;">{{ article.summary }}</p>
         <div class="row mx-auto mt-3">
             <div class="col-xs-12 col-sm-12 col-md-6 text-left" style="padding: 0">
@@ -68,6 +68,22 @@
                     <br>
                     <b>Read more:</b><br>
                     {% include "include/neighbors.html" %}
+                {% endif %}
+
+                <!-- Google Adsense -->
+                {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.sidebar %}
+                    <br>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- ad-sidebar -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="{{ GOOGLE_ADSENSE.id }}"
+                         data-ad-slot="{{ GOOGLE_ADSENSE.ads.sidebar }}"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 {% endif %}
             </div>
 
