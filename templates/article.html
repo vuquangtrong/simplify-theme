@@ -160,6 +160,21 @@
             <b>Read more:</b><br>
             {% include "include/neighbors.html" %}
         {% endif %}
+
+        <!-- Google Adsense -->
+        {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.article %}
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ad-home -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="{{ GOOGLE_ADSENSE.id }}"
+                 data-ad-slot="{{ GOOGLE_ADSENSE.ads.article }}"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        {% endif %}
     {% endif %}
 
     <!-- Releated posts -->

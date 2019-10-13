@@ -165,6 +165,8 @@ GOOGLE_ADSENSE = {
     'ads': {
         'home': '7539833074',
         'sidebar': '5458247602',
+        'page': '',
+        'article': '',
     }
 }
 
