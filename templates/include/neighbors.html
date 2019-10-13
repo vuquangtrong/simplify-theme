@@ -1,11 +1,11 @@
 <div class="pagination px-2">
     {% if article.prev_article %}
-    <a class="float-left" href="{{ SITEURL }}/{{ article.prev_article.url }}">
+    <a class="{% if article.next_article %}w-50{% else %}w-100{% endif %}" href="{{ SITEURL }}/{{ article.prev_article.url }}">
         &ll; {{ article.prev_article.title }}
     </a>
     {% endif %}
     {% if article.next_article %}
-    <a class="float-right" href="{{ SITEURL }}/{{ article.next_article.url }}">
+    <a class="{% if article.prev_article %}w-50{% else %}w-100{% endif %} text-right" href="{{ SITEURL }}/{{ article.next_article.url }}">
         {{ article.next_article.title }} &gg;
     </a>
     {% endif %}

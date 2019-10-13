@@ -25,8 +25,19 @@ $(window).scroll(function(e) {
     if (scroll >= 150) {
         $('#navbarMenu').collapse('hide');
     }
+    if (scroll >= 300) {
+        $('#backToTop').fadeIn();
+    } else {
+        $('#backToTop').fadeOut();
+    }
 });
 
 /* add classes into tables */
 $("table:not(.highlighttable)").addClass("table table-hover table-sm table-bordered");
 $("thead").addClass("thead-light");
+
+/* action to back to top */
+$('#backToTop').click(function() {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+});

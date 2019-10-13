@@ -119,8 +119,8 @@
         {% endif %}
 
         <!-- Google Adsense -->
-        {% if GOOGLE_ADSENSE_ID %}
-            {% include "include/gads.html" %}
+        {% if GOOGLE_ADSENSE %}
+            <script data-ad-client="{{ GOOGLE_ADSENSE.id }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         {% endif %}
 
         <!-- Heap Analytic -->
@@ -143,6 +143,9 @@
 
 <!-- Body -->
 <body class="d-flex flex-column" data-spy="scroll" data-target="#toc" data-offset="0" style="position: relative;">
+    <!-- Top anchor -->
+    <a href="#" id="backToTop" style="display: block; z-index: 1;" title="Back to top"><span></span></a>
+
     <!-- Google tag manager -->
     {% if GOOGLE_TAG_MANAGER %}
         {% include "include/gtm_noscript.html" %}
@@ -254,7 +257,7 @@
     {% block page %}
 
         <!-- Header -->
-        <header class="bg-dark text-light shadow-sm pt-3 pb-2" style="display: flow-root;">
+        <header class="bg-dark text-light shadow-sm pt-3 pb-2">
             {% block header %}{% endblock header %}
         </header>
 

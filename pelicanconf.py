@@ -154,22 +154,17 @@ DISQUS_SITENAME = "vuquangtrong-github-io"
 SHARE_POST = True # old style and static sharing buttons for articles, use AddThis for tracking purpose
 ADD_THIS_ID = "ra-5d9ffca0db80069e" # can be on index, any article or page, and can track user activities
 
-# Tracking and Ads
+# Tracking
 GOOGLE_ANALYTICS = "UA-42618265-2" # old method
 # GOOGLE_SITE_TAG = "UA-42618265-2" # new method to use with Tag Manager
 # GOOGLE_TAG_MANAGER = ""
 
-GOOGLE_ADSENSE_ID = 'ca-pub-9105473411342324'
-
-GOOGLE_ADSENSE_CONFIG = {
-    'page_level_ads': False,
+# Ads
+GOOGLE_ADSENSE = {
+    'id': 'ca-pub-9105473411342324',
     'ads': {
-        'aside': '',
-        'main_menu': '',
-        'index_top': '',
-        'index_bottom': '',
-        'article_top': '',
-        'article_bottom': '',
+        'home': '7539833074',
+        'sidebar': '5458247602',
     }
 }
 

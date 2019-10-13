@@ -14,6 +14,7 @@ Source code [simplify-bootstrap-theme](https://github.com/vuquangtrong/simplify-
 - OpenGraph support
 - SEO ready
 - Table of Content sidebar
+- Back to Top floating button
 - Realted posts, next/previous articles
 - Social Sharing (dynamic/static)
 - Comments on articles
