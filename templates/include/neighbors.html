@@ -1,12 +1,12 @@
-<div class="pagination px-2">
+<div class="pagination">
     {% if article.prev_article %}
     <a class="{% if article.next_article %}w-50{% else %}w-100{% endif %}" href="{{ SITEURL }}/{{ article.prev_article.url }}">
-        &ll; {{ article.prev_article.title }}
+        {% if article.next_article %}&ll; {% endif %}{{ article.prev_article.title }}
     </a>
     {% endif %}
     {% if article.next_article %}
-    <a class="{% if article.prev_article %}w-50{% else %}w-100{% endif %} text-right" href="{{ SITEURL }}/{{ article.next_article.url }}">
-        {{ article.next_article.title }} &gg;
+    <a class="{% if article.prev_article %}w-50{% else %}w-100{% endif %} {% if article.prev_article %}text-right{% endif %}" href="{{ SITEURL }}/{{ article.next_article.url }}">
+        {{ article.next_article.title }}{% if article.prev_article %} &gg;{% endif %}
     </a>
     {% endif %}
 </div>

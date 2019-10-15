@@ -89,6 +89,7 @@ PLUGINS = [
     'neighbors', # find next, previous article 
     'share_post', # static sharing buttons
     'tipue_search', # generate data for searching
+    #'tag_cloud', # generate tag cloud in different sizes
 ]
 
 SITEMAP = {
@@ -146,6 +147,10 @@ SOCIAL = {
 # Site validation
 # CLAIM_GOOGLE = ""
 # CLAIM_BING = ""
+
+# Search Engine
+# you can use static search engine like TipueSearch or dynami engine like Google Custom Search Engine
+GOOGLE_CSE_ID = '007986648373531383257:hnbvizg2lks'
 
 # Comments
 DISQUS_SITENAME = "vuquangtrong-github-io"

@@ -9,17 +9,17 @@ Source code [simplify-bootstrap-theme](https://github.com/vuquangtrong/simplify-
 
 ### Features
 
-- Responsive layout for mobile and desktop
-- Quick Search
-- OpenGraph support
-- SEO ready
-- Table of Content sidebar
-- Back to Top floating button
-- Realted posts, next/previous articles
-- Social Sharing (dynamic/static)
-- Comments on articles
-- Rich Snippets (JSON-LD)
-- Sitemap
+- Responsive layout for mobile and desktop (Bootstrap)
+- Quick Search (Tipue Search and/or Google Search)
+- OpenGraph (Facebook) and Twitter support
+- SEO with contentful metadata, ready for search indexing
+- Table of Content sidebar with highlight
+- Back to Top floating button in long article
+- Related posts, next/previous articles
+- Collapsible lists in tags and categories
+- Social Sharing (AddThis or direct links)
+- Comments on articles (Diqus)
+- Rich Snippets (metadata, json-ld, sitemap, robots.txt)
 
 ### Install
 
