@@ -150,7 +150,7 @@ SOCIAL = {
 
 # Search Engine
 # you can use static search engine like TipueSearch or dynami engine like Google Custom Search Engine
-GOOGLE_CSE_ID = '007986648373531383257:hnbvizg2lks'
+# GOOGLE_CSE_ID = '007986648373531383257:hnbvizg2lks'
 
 # Comments
 DISQUS_SITENAME = "vuquangtrong-github-io"
@@ -165,19 +165,19 @@ GOOGLE_ANALYTICS = "UA-42618265-2" # old method
 # GOOGLE_TAG_MANAGER = ""
 
 # Ads
-GOOGLE_ADSENSE = {
-    'id': 'ca-pub-9105473411342324',
-    'ads': {
-        'home': '7539833074',
-        'sidebar': '5458247602',
-        'page': '',
-        'article': '',
-    }
-}
+# GOOGLE_ADSENSE = {
+#     'id': 'ca-pub-9105473411342324',
+#     'ads': {
+#         'home': '7539833074',
+#         'sidebar': '5458247602',
+#         'page': '',
+#         'article': '',
+#     }
+# }
 
 # HEAP_ANALYTICS = ""
 
-MATOMO_SITENAME = 'vuquangtronggithubio' # new site of PIWIK
+# MATOMO_SITENAME = 'vuquangtronggithubio' # new site of PIWIK
 
 # PIWIK_SITE_ID = ""
 # PIWIK_URL = ""
