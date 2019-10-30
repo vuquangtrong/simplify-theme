@@ -1,11 +1,11 @@
 # Simplify Bootstrap Theme
-A simple, clean, contentful [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction) theme for Pelican blogger.
+A simple, clean, contentful [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction) theme for Pelican blogger.   
 You can use this theme to host programming articles, journals, or galeries.
 
 ### Live Demo
 
-Visit the live blog of the theme creator's blog: <https://vuquangtrong.github.io> to see theme in action, which is also has some articles about theme's documents.
-Source code [simplify-theme](https://github.com/vuquangtrong/simplify-theme)
+Visit the live blog of the theme creator's blog: <https://vuquangtrong.github.io> to see theme in action, which is also has some articles about theme's documents.  
+Source code is at [simplify-theme](https://github.com/vuquangtrong/simplify-theme)
 
 ### Features
 
@@ -23,7 +23,7 @@ Source code [simplify-theme](https://github.com/vuquangtrong/simplify-theme)
 
 ### Install
 
-Download the theme from [simplify-theme](https://github.com/vuquangtrong/simplify-theme) or from [pelican-themes](https://github.com/getpelican/pelican-themes).
+Download the theme from [simplify-theme](https://github.com/vuquangtrong/simplify-theme) or from [pelican-themes](https://github.com/getpelican/pelican-themes).  
 You may need to check the included example `pelicanconf.py` and `publishconf.py` for more information.
 
 ### Integrations
@@ -60,7 +60,7 @@ By default Pelican enables below extensions to process your markdown files:
 
 ### Customized styles
 
-The theme also bring to you a clean, simple, but contenful layout.
+The theme also bring to you a clean, simple, but contenful layout.  
 This [Simplify Article](https://vuquangtrong.github.io/blog/simplify-article.html) will guide you how to write content in markdown and how it will be rendered on your page.
 
 ### Preview
@@ -69,12 +69,12 @@ This [Simplify Article](https://vuquangtrong.github.io/blog/simplify-article.htm
 
 ### How to contribute
 
-Developing Simplify is my effort in some weekends. You are invited to help develop it further.
-Feel free to fork the [repository][], and submit pull requests.
-If you find any issues, or have a suggestion, then please open an [issue][].
+Developing Simplify is my effort in some weekends. You are invited to help develop it further.  
+Feel free to fork the [repository](https://github.com/vuquangtrong/simplify-theme), and submit pull requests.  
+If you find any issues, or have a suggestion, then please open an [issue](https://github.com/vuquangtrong/simplify-theme/issues).
 
 ### License
 
-Simplify is released under the [Creative Commons Attribution 4.0 International](https://spdx.org/licenses/CC-BY-4.0.html) license.
-All contributors will be listed in [Authors](AUTHORS.md) page. It maybe imcomplete but it is to honor in all they did.
+Simplify is released under the [Creative Commons Attribution 4.0 International](https://spdx.org/licenses/CC-BY-4.0.html) license.  
+All contributors will be listed in [Authors](AUTHORS.md) page. It maybe imcomplete but it is to honor in all they did.  
 I would like you to **have some words to refer to authors work in your page's footer**. Thank you in advanced!
