@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Simplify - tutorial</title><link href="https://vuquangtrong.github.io/simplify-theme/" rel="alternate"></link><link href="https://vuquangtrong.github.io/simplify-theme/feeds/tutorial.atom.xml" rel="self"></link><id>https://vuquangtrong.github.io/simplify-theme/</id><updated>2019-10-10T20:00:00+07:00</updated><subtitle>A simple theme for blog, powered by Bootstrap and Pelican</subtitle><entry><title>Simplify Article</title><link href="https://vuquangtrong.github.io/simplify-theme/blog/simplify-article.html" rel="alternate"></link><published>2019-10-08T10:00:00+07:00</published><updated>2019-10-10T20:00:00+07:00</updated><author><name>vuquangtrong</name></author><id>tag:vuquangtrong.github.io,2019-10-08:/simplify-theme/blog/simplify-article.html</id><summary type="html">Show how an article is rendered by&amp;nbsp;Markdown</summary><content type="html">&lt;p&gt;Following content is for testing Markdown-to-&lt;span class="caps"&gt;HTML&lt;/span&gt; generator with various Markdown settings including standard syntax and extended &lt;a href="https://python-markdown.github.io/extensions"&gt;Markdown Extensions&lt;/a&gt;. To setup Markdown settings in Pelican, please check this article: &lt;a href="https://vuquangtrong.github.io/simplify-theme/blog/setup-blog-with-bootstrap-and-pelican.html" title="Setup blog with Pelican"&gt;Setup blog with Pelican&lt;/a&gt;.&lt;/p&gt;
+&lt;p class="alert alert-info"&gt;You should know about &lt;strong&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;span class="caps"&gt;CSS&lt;/span&gt;&lt;/strong&gt; and probably &lt;strong class="text-danger"&gt;Markdown&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="markdown-settings"&gt;Markdown&amp;nbsp;Settings&lt;/h3&gt;
+&lt;p&gt;Here are the list of Markdown extensions will be used to generate this&amp;nbsp;article.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;MARKDOWN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;extensions&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+        &lt;span class="c1"&gt;# official extensions&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;markdown.extensions.extra&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# include extensions: abbr, attr_list, def_list, fenced_code, footnotes, tables&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;markdown.extensions.codehilite&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# to generate code color scheme using pygments&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;markdown.extensions.meta&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# to parse key:value pairs at the begining of file&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;markdown.extensions.sane_lists&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="c1"&gt;# for better list &lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;markdown.extensions.toc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# add Table of Content&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;markdown.extensions.nl2br&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# easily to add new line, but make attr_list and legacy_attrs hard to control&lt;/span&gt;
+        &lt;span class="c1"&gt;#&amp;#39;markdown.extensions.admonition&amp;#39;, # to make  alert box&lt;/span&gt;
+        &lt;span class="c1"&gt;#&amp;#39;markdown.extensions.legacy_attrs&amp;#39;, # insert attribs into element, but markdown already has a built-in function that do the same thing&lt;/span&gt;
+        &lt;span class="c1"&gt;#&amp;#39;markdown.extensions.legacy_em&amp;#39;, # to use legacy emphasis&lt;/span&gt;
+        &lt;span class="c1"&gt;#&amp;#39;markdown.extensions.smarty&amp;#39;, # converts ASCII dashes, quotes and ellipses to their HTML entity equivalents&lt;/span&gt;
+        &lt;span class="c1"&gt;#&amp;#39;markdown.extensions.wikilinks&amp;#39;,&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# 3rd party extensions&lt;/span&gt;
+        &lt;span class="c1"&gt;#&amp;#39;markdown_captions&amp;#39;, # convert &amp;lt;img&amp;gt; to &amp;lt;figure&amp;gt; and &amp;lt;figcaption&amp;gt;&lt;/span&gt;
+        &lt;span class="c1"&gt;#&amp;#39;markdown_checklist.extension&amp;#39;, # show checkbox in list&lt;/span&gt;
+    &lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;extension_configs&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;markdown.extensions.codehilite&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;css_class&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;highlight&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;output_format&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;html5&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;h3 id="paragraphs"&gt;Paragraphs&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Emphasis a word or a phrase: &lt;span class="ge"&gt;*italic*&lt;/span&gt; or &lt;span class="gs"&gt;**bold** or ***bold and italic***&lt;/span&gt; or &lt;span class="sb"&gt;`in-line code`&lt;/span&gt;.
+Show input keys: &amp;lt;kbd&amp;gt;Ctrl&amp;lt;/kbd&amp;gt; &amp;lt;kbd&amp;gt;Alt&amp;lt;/kbd&amp;gt; &amp;lt;kbd&amp;gt;Del&amp;lt;/kbd&amp;gt;.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Emphasis a word or a phrase: &lt;em&gt;italic&lt;/em&gt; or &lt;strong&gt;bold&lt;/strong&gt; or &lt;strong&gt;&lt;em&gt;bold and italic&lt;/em&gt;&lt;/strong&gt; or &lt;code&gt;in-line code&lt;/code&gt;.&lt;br&gt;
+Show input keys: &lt;kbd&gt;Ctrl&lt;/kbd&gt; &lt;kbd&gt;Alt&lt;/kbd&gt; &lt;kbd&gt;Del&lt;/kbd&gt;.&lt;/p&gt;
+&lt;p&gt;As mentioned in &lt;a href="https://stackoverflow.com/questions/4823468/comments-in-markdown"&gt;how to comments in markdown&lt;/a&gt; you can (ab)use the link labels syntax to write your comments.&lt;br&gt;
+Those lines will not be processed, so they are not included in rendered page nor page&amp;#8217;s source&amp;nbsp;code.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[&lt;span class="nl"&gt;//&lt;/span&gt;]: &lt;span class="na"&gt;# (This may be the most platform independent comment)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;h3 id="markdown-in-html-tags"&gt;Markdown in &lt;span class="caps"&gt;HTML&lt;/span&gt;&amp;nbsp;tags&lt;/h3&gt;
+&lt;p&gt;By default, text in &lt;span class="caps"&gt;HTML&lt;/span&gt; tags is not rendered. To support Markdown syntax in &lt;span class="caps"&gt;HTML&lt;/span&gt; tags, add &lt;code&gt;markdown="1"&lt;/code&gt; into the&amp;nbsp;tag.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;div markdown=&amp;quot;0&amp;quot;&amp;gt;
+This text is not &lt;span class="gs"&gt;**rendered**&lt;/span&gt;.
+&amp;lt;/div&amp;gt;
+&amp;lt;div markdown=&amp;quot;1&amp;quot;&amp;gt;
+This text is &lt;span class="gs"&gt;**rendered**&lt;/span&gt; well.
+&amp;lt;/div&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div&gt;
+This text is not **rendered**.
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;p&gt;This text is &lt;strong&gt;rendered&lt;/strong&gt;&amp;nbsp;well.&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id="attribute-lists"&gt;Attribute&amp;nbsp;Lists&lt;/h3&gt;
+&lt;h4 id="official-extension"&gt;Official&amp;nbsp;extension&lt;/h4&gt;
+&lt;p&gt;Element can have some attributes by using &lt;code&gt;markdown.extensions.attr_list&lt;/code&gt; extension.&lt;br&gt;
+This provides syntax: &lt;code&gt;{: #someid .someclass somekey='some value' }&lt;/code&gt; to add attributes to a block or a span element.&lt;br&gt;
+To use with a &lt;strong&gt;block&lt;/strong&gt; element, the attribute list should be defined &lt;em&gt;on the last line of the block&lt;/em&gt;. &lt;br&gt;
+To use with a &lt;strong&gt;span&lt;/strong&gt; element, the attribute list should be placd &lt;em&gt;right after the generated span without space&lt;/em&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;A paragraph with dark background and light text, using &lt;span class="sb"&gt;`attr_list`&lt;/span&gt; extension. &lt;span class="ge"&gt;*Attribute list can be applied to a span element*&lt;/span&gt;{: .text-warning} if the attribute list is added right after the span without any space.{: .bg-dark .text-light .p-1}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A paragraph with dark background and light text, using &lt;code&gt;attr_list&lt;/code&gt; extension. &lt;em class="text-warning"&gt;Attribute list can be applied to a span element&lt;/em&gt; if the attribute list is added right after the span without any space.{: .bg-dark .text-light&amp;nbsp;.p-1}&lt;/p&gt;
+&lt;h4 id="build-in-parser"&gt;Build-in&amp;nbsp;parser&lt;/h4&gt;
+&lt;p&gt;Some Markdown version already has a built-in parser to process attribute lists. For example in Markdown &lt;code&gt;3.1.1&lt;/code&gt;, below code generate the same &lt;span class="caps"&gt;HTML&lt;/span&gt;&amp;nbsp;block.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Use built-in parser
+![&lt;span class="nt"&gt;icon&lt;/span&gt;](&lt;span class="na"&gt;{static}icon.png &amp;quot;icon&amp;quot;&lt;/span&gt;){id=&amp;quot;icon&amp;quot; class=&amp;quot;icon mx-auto&amp;quot; style=&amp;quot;display:block&amp;quot;}
+
+Use attr_list extension
+![&lt;span class="nt"&gt;icon&lt;/span&gt;](&lt;span class="na"&gt;{static}icon.png &amp;quot;icon&amp;quot;&lt;/span&gt;){: &lt;span class="ni"&gt;#icon&lt;/span&gt; .icon .mx-auto style=display:block}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="icon" class="icon mx-auto" id="icon" src="https://vuquangtrong.github.io/simplify-theme/blog/tutorial/simplify_article/icon.png" style="display:block" title="icon"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;This is a sample sentence in green.
+{class=&amp;quot;text-success text-center&amp;quot;}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p class="text-success text-center"&gt;This is a sample sentence in green.&lt;br&gt;&lt;/p&gt;
+&lt;h4 id="deprecated-extenstion"&gt;Deprecated&amp;nbsp;extenstion&lt;/h4&gt;
+&lt;p&gt;Another extension that also adds attribute into block or element is &lt;code&gt;markdown.extensions.legacy_attrs&lt;/code&gt;. This extension has been deprecated in favor of &lt;a href="#attribute-lists"&gt;Attribute Lists&lt;/a&gt;.&lt;br&gt;
+Attributes are defined by including the syntax &lt;code&gt;{@key=value}&lt;/code&gt; within the&amp;nbsp;element.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{@class=bg-dark text-warning p-1}A paragraph with dark background and yellow text, using &lt;span class="sb"&gt;`legacy_attrs`&lt;/span&gt; extension.  
+&lt;span class="ge"&gt;_This text won&amp;#39;t be formatter_&lt;/span&gt;, but &lt;span class="gs"&gt;__this text will be formatted__&lt;/span&gt; by the latter directive at the end of this block{@class=text-success}
+
+if nl2br extenstion is disabled, it will be more readable as below
+
+{@class=bg-dark text-warning p-1}
+A paragraph with dark background and yellow text, using &lt;span class="sb"&gt;`legacy_attrs`&lt;/span&gt; extension.  
+&lt;span class="ge"&gt;_This text won&amp;#39;t be formatter_&lt;/span&gt;, but &lt;span class="gs"&gt;__this text will be formatted__&lt;/span&gt; by the latter directive at the end of this block{@class=text-success}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;h3 id="blockquote"&gt;Blockquote&lt;/h3&gt;
+&lt;p&gt;Using default directive &lt;strong&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/strong&gt; with &lt;code&gt;legacy_attrs&lt;/code&gt; or &lt;code&gt;attr_list&lt;/code&gt; to get better&amp;nbsp;result.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;I do love you so much!&lt;/span&gt;
+&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;_Henry_&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;I do love you so much!&lt;br&gt;
+&lt;em&gt;Henry&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;I do love you so much!&lt;/span&gt;
+&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;_Henry_{class=blockquote-footer}&lt;/span&gt;
+
+or
+
+&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;I do love you so much!&lt;/span&gt;
+&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;_Henry_{: .blockquote-footer}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;I do love you so much!&lt;br&gt;
+&lt;em class="blockquote-footer"&gt;Henry&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I do love you so much!&lt;br&gt;
+&lt;em class="blockquote-footer"&gt;Henry&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="images"&gt;Images&lt;/h3&gt;
+&lt;p&gt;Using &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tag is enough to show image. Some people use &lt;a href="https://github.com/evidlo/markdown_captions"&gt;markdown_captions&lt;/a&gt; extension to convert &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; to &lt;code&gt;&amp;lt;figure&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;figcaption&amp;gt;&lt;/code&gt; which are new in &lt;span class="caps"&gt;HTML5&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Adding &lt;code&gt;&amp;lt;figure&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;figcaption&amp;gt;&lt;/code&gt; manually can be done by using &lt;a href="#markdown-in-html-tags"&gt;Markdown in &lt;span class="caps"&gt;HTML&lt;/span&gt; tags&lt;/a&gt;, but it doesn&amp;#8217;t look good in markdown&amp;nbsp;file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;figure markdown=&amp;quot;1&amp;quot;&amp;gt;
+![&lt;span class="nt"&gt;my code doesn&amp;#39;t work&lt;/span&gt;](&lt;span class="na"&gt;{static}my-code-doesn_t-work.jpg &amp;quot;my code doesn&amp;#39;t work&amp;quot;&lt;/span&gt;)&amp;lt;figcaption class=&amp;quot;img-caption&amp;quot;&amp;gt;_my code doesn&amp;#39;t work &amp;amp;copy; [&lt;span class="nt"&gt;nerd4life.studio&lt;/span&gt;](&lt;span class="na"&gt;https://nerd4life.studio/blogs/nerd4life-comic/my-code-doesnt-work&lt;/span&gt;)_&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There is another way to add caption and credit to&amp;nbsp;image:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;![&lt;span class="nt"&gt;my code doesn&amp;#39;t work&lt;/span&gt;](&lt;span class="na"&gt;{static}my-code-doesn_t-work.jpg &amp;quot;my code doesn&amp;#39;t work&amp;quot;&lt;/span&gt;)_my code doesn&amp;#39;t work &amp;amp;copy; [&lt;span class="nt"&gt;nerd4life.studio&lt;/span&gt;](&lt;span class="na"&gt;https://nerd4life.studio/blogs/nerd4life-comic/my-code-doesnt-work&lt;/span&gt;)_{: .img-caption}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;img-caption&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;block&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;#6c757d&lt;/span&gt;&lt;span class="cp"&gt;!important&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;text-align&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;center&lt;/span&gt;&lt;span class="cp"&gt;!important&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="kt"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;font-weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="my code doesn't work" src="https://vuquangtrong.github.io/simplify-theme/blog/tutorial/simplify_article/my-code-doesn_t-work.jpg" title="my code doesn't work"&gt;&lt;em class="img-caption"&gt;my code doesn&amp;#8217;t work &amp;copy; &lt;a href="https://nerd4life.studio/blogs/nerd4life-comic/my-code-doesnt-work"&gt;nerd4life.studio&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="standard-codeblock"&gt;Standard&amp;nbsp;Codeblock&lt;/h3&gt;
+&lt;p&gt;Using &lt;em&gt;Standard Codeblock&lt;/em&gt; with correct indent, code can be shown as below type of&amp;nbsp;paragraph&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Show line number&lt;/strong&gt;&lt;br&gt;
+use &lt;em&gt;Shebang&lt;/em&gt; &lt;code&gt;#!&lt;/code&gt; instead of &lt;code&gt;:::&lt;/code&gt; to render line&amp;nbsp;number.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gh"&gt;#&lt;/span&gt;!python hl_lines=&amp;quot;1 3&amp;quot;
+&lt;span class="gh"&gt;#&lt;/span&gt; This line is emphasized
+&lt;span class="gh"&gt;#&lt;/span&gt; This line isn&amp;#39;t
+&lt;span class="gh"&gt;#&lt;/span&gt; This line is emphasized too
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will&amp;nbsp;be:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="hll"&gt;&lt;span class="c1"&gt;# This line is emphasized&lt;/span&gt;
+&lt;/span&gt;&lt;span class="c1"&gt;# This line isn&amp;#39;t&lt;/span&gt;
+&lt;span class="hll"&gt;&lt;span class="c1"&gt;# This line is emphasized too&lt;/span&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;In&amp;nbsp;paragraph&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;:::python hl_lines=&amp;quot;1 3&amp;quot;
+&lt;span class="gh"&gt;#&lt;/span&gt; This line is emphasized
+&lt;span class="gh"&gt;#&lt;/span&gt; This line isn&amp;#39;t
+&lt;span class="gh"&gt;#&lt;/span&gt; This line is emphasized too
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will&amp;nbsp;be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="hll"&gt;&lt;span class="c1"&gt;# This line is emphasized&lt;/span&gt;
+&lt;/span&gt;&lt;span class="c1"&gt;# This line isn&amp;#39;t&lt;/span&gt;
+&lt;span class="hll"&gt;&lt;span class="c1"&gt;# This line is emphasized too&lt;/span&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;In nested list&amp;nbsp;item&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;-&lt;/span&gt; First item
+
+    :::python hl_lines=&amp;quot;1 3&amp;quot;
+    # This line is emphasized
+    # This line isn&amp;#39;t
+    # This line is emphasized too
+
+&lt;span class="k"&gt;-&lt;/span&gt; Second item
+&lt;span class="k"&gt;-&lt;/span&gt; Third item
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will&amp;nbsp;be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;First&amp;nbsp;item&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="hll"&gt;&lt;span class="c1"&gt;# This line is emphasized&lt;/span&gt;
+&lt;/span&gt;&lt;span class="c1"&gt;# This line isn&amp;#39;t&lt;/span&gt;
+&lt;span class="hll"&gt;&lt;span class="c1"&gt;# This line is emphasized too&lt;/span&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Second&amp;nbsp;item&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Third&amp;nbsp;item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;In&amp;nbsp;blockquote&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;This snippet of code&lt;/span&gt;
+&amp;gt; 
+    #!python
+    from &lt;span class="gs"&gt;__future__&lt;/span&gt; import me
+    me.teleportTo(now)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will&amp;nbsp;be:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This snippet of&amp;nbsp;code&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;me&lt;/span&gt;
+&lt;span class="n"&gt;me&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;teleportTo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="fenced-codeblock"&gt;Fenced&amp;nbsp;Codeblock&lt;/h3&gt;
+&lt;p&gt;Using &lt;em&gt;Fenced Codeblock&lt;/em&gt; allow the color highlight scheme to show in Markdown editor,&lt;br&gt;
+but this won&amp;#8217;t support to show codeblock in list item or blockquote, and won&amp;#8217;t show line&amp;nbsp;number.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;````python hl_lines=&amp;quot;2&amp;quot;
+&lt;span class="gh"&gt;#&lt;/span&gt; You can highlight a line by adding hl_lines=&amp;quot;2&amp;quot;
+&lt;span class="gh"&gt;#&lt;/span&gt; so this line will be highlighted
+````
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will&amp;nbsp;be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# You can highlight a line by adding hl_lines=&amp;quot;2&amp;quot;&lt;/span&gt;
+&lt;span class="hll"&gt;&lt;span class="c1"&gt;# so this line will be highlighted&lt;/span&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is how codeblok looks line in &lt;code&gt;SublimeText 3&lt;/code&gt; using &lt;code&gt;MarkdownExtended&lt;/code&gt; and &lt;code&gt;MonokaiExtended&lt;/code&gt; packages&lt;br&gt;
+&lt;em&gt;Standard Codeblock&lt;/em&gt;&lt;br&gt;
+&lt;img alt="standard_codeblock" src="https://vuquangtrong.github.io/simplify-theme/blog/tutorial/simplify_article/standard_codeblock.jpg" title="standard_codeblock"&gt;&lt;br&gt;
+&lt;em&gt;Fenced Codenlock&lt;/em&gt;&lt;br&gt;
+&lt;img alt="fenced_codeblock" src="https://vuquangtrong.github.io/simplify-theme/blog/tutorial/simplify_article/fenced_codeblock.jpg" title="fenced_codeblock"&gt;&lt;/p&gt;
+&lt;p&gt;To add line number, a small &lt;code&gt;jQuery&lt;/code&gt; code will be used to generate texts and few &lt;code&gt;CCS&lt;/code&gt; styles will be used to format&amp;nbsp;them&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;pre&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementsByTagName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pre&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="nx"&gt;pl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pre&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;pl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;pre&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;span class=&amp;quot;line-number&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;pre&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;span class=&amp;quot;cl&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pre&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/\n/&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;j&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;num&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="nx"&gt;j&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;line_num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pre&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;getElementsByTagName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;span&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+            &lt;span class="nx"&gt;line_num&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;innerHTML&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;span&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;j&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;/span&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;})();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;pre&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;line-number&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;block&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;float&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;left&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;margin&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;-1&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;border-right&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="kc"&gt;solid&lt;/span&gt; &lt;span class="mh"&gt;#ddd&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;text-align&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;right&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="nt"&gt;pre&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;line-number&lt;/span&gt; &lt;span class="nt"&gt;span&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;block&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;padding&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mf"&gt;.5&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;#ccc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="nt"&gt;pre&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;cl&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;block&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;clear&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;both&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;h3 id="table"&gt;Table&lt;/h3&gt;
+&lt;p&gt;Table with alignment and format text&amp;nbsp;inside.&lt;/p&gt;
+&lt;p&gt;There&amp;#8217;s still no effective method to add class into &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt; tag in Markdown.&lt;br&gt;
+We can use &lt;code&gt;jQuery&lt;/code&gt; &lt;code&gt;addClass()&lt;/code&gt; function to do this&amp;nbsp;trick:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;table&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;addClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;table table-hover table-sm table-bordered&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;thead&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;addClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;thead-light&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Define a&amp;nbsp;table&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;| Level                      | Description                         | Default                       |
+| :---                       | :---                                |                          ---: |
+| Debug                      | All information                     | &lt;span class="ge"&gt;_Off_&lt;/span&gt;{: .badge .badge-danger} |
+| Info {: .text-info}        | Useful infomation                   | &lt;span class="ge"&gt;_Off_&lt;/span&gt;{: .badge .badge-danger} |
+| Warning {: .text-warning}  | &lt;span class="gs"&gt;**Error, but system still runs**&lt;/span&gt;    | &lt;span class="ge"&gt;_On_&lt;/span&gt;{: .badge .badge-success} |
+| Error {: .text-danger}     | &lt;span class="gs"&gt;***Critical error, system halted***&lt;/span&gt; | &lt;span class="ge"&gt;_On_&lt;/span&gt;{: .badge .badge-success} |
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will get it rendered&amp;nbsp;as:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="left"&gt;Level&lt;/th&gt;
+&lt;th align="left"&gt;Description&lt;/th&gt;
+&lt;th align="right"&gt;Default&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="left"&gt;Debug&lt;/td&gt;
+&lt;td align="left"&gt;All information&lt;/td&gt;
+&lt;td align="right"&gt;&lt;em class="badge badge-danger"&gt;Off&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="left" class="text-info"&gt;Info &lt;/td&gt;
+&lt;td align="left"&gt;Useful infomation&lt;/td&gt;
+&lt;td align="right"&gt;&lt;em class="badge badge-danger"&gt;Off&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="left" class="text-warning"&gt;Warning &lt;/td&gt;
+&lt;td align="left"&gt;&lt;strong&gt;Error, but system still runs&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;em class="badge badge-success"&gt;On&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="left" class="text-danger"&gt;Error &lt;/td&gt;
+&lt;td align="left"&gt;&lt;strong&gt;&lt;em&gt;Critical error, system halted&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;em class="badge badge-success"&gt;On&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id="admonition"&gt;Admonition&lt;/h3&gt;
+&lt;p&gt;If you use &lt;code&gt;admonition&lt;/code&gt; extension, the below text will change to a box with title and&amp;nbsp;text&lt;/p&gt;
+&lt;p&gt;!!! note &amp;#8220;How to use Admonition&amp;#8221;&lt;br&gt;
+    Add &lt;code&gt;markdown.extensions.admonition&lt;/code&gt; into your &lt;a href="#markdown-settings"&gt;Markdown extension settings&lt;/a&gt; &lt;br&gt;
+    Add &lt;span class="caps"&gt;CCS&lt;/span&gt; file for Admonition&amp;nbsp;styles.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="sane-list"&gt;Sane&amp;nbsp;List&lt;/h3&gt;
+&lt;p&gt;Lists will not mixed thanks to &lt;code&gt;markdown.extensions.sane_lists&lt;/code&gt; extension.&lt;br&gt;
+Use &lt;code&gt;legacy_attrs&lt;/code&gt; or &lt;code&gt;attr_list&lt;/code&gt; to format list&amp;nbsp;items.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;1.&lt;/span&gt; First item
+{: .text-primary}
+&lt;span class="k"&gt;2.&lt;/span&gt; Second item
+{class=text-success}
+
+&lt;span class="k"&gt;-&lt;/span&gt; a new list
+{: .text-primary}
+&lt;span class="k"&gt;-&lt;/span&gt; not mixed
+{style=color:red}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li class="text-primary"&gt;First item&lt;br&gt;&lt;/li&gt;
+&lt;li class="text-success"&gt;Second item&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li class="text-primary"&gt;a new list&lt;br&gt;&lt;/li&gt;
+&lt;li style="color:red"&gt;not mixed&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="dictionary"&gt;Dictionary&lt;/h3&gt;
+&lt;p&gt;A definition list can be render using &lt;code&gt;markdown.extensions.def_list&lt;/code&gt; extension.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Apple
+:   Pomaceous fruit of plants of the genus Malus in the family Rosaceae.
+
+Orange
+:   The fruit of an evergreen tree of the genus Citrus.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;dl&gt;
+&lt;dt&gt;Apple&lt;/dt&gt;
+&lt;dd&gt;Pomaceous fruit of plants of the genus Malus in the family&amp;nbsp;Rosaceae.&lt;/dd&gt;
+&lt;dt&gt;Orange&lt;/dt&gt;
+&lt;dd&gt;The fruit of an evergreen tree of the genus&amp;nbsp;Citrus.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;hr&gt;
+&lt;h3 id="footnotes"&gt;Footnotes&lt;/h3&gt;
+&lt;p&gt;Footnotes&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; have a label&lt;sup id="fnref:xyz"&gt;&lt;a class="footnote-ref" href="#fn:xyz"&gt;2&lt;/a&gt;&lt;/sup&gt; and the footnote&amp;#8217;s&amp;nbsp;content.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="new-line-to-break"&gt;New-Line-to-Break&lt;/h3&gt;
+&lt;p&gt;Add &lt;code&gt;markdown.extensions.nl2br&lt;/code&gt; into your &lt;a href="#markdown-settings"&gt;Markdown extension settings&lt;/a&gt;.&lt;br&gt;
+This causes newlines to be treated as hard breaks, like StackOverflow and GitHub flavored Markdown do.&lt;br&gt;
+If this extension is not used, these 3 lines will become one line in &lt;span class="caps"&gt;HTML&lt;/span&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="checklist"&gt;Checklist&lt;/h3&gt;
+&lt;p&gt;To show a list with checkbox, install &lt;a href="https://github.com/FND/markdown-checklist"&gt;&lt;code&gt;markdown_checklist&lt;/code&gt;&lt;/a&gt; extension and enable it in Markdown extensions list.&lt;br&gt;
+The list item indicators still show, so add some &lt;code&gt;CSS&lt;/code&gt; style to hide&amp;nbsp;them.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;ul&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;checklist&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;list-style-type&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;none&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;padding-left&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;inherit&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Finally, a task list looks like&amp;nbsp;below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;- [ ]&lt;/span&gt; foo
+&lt;span class="k"&gt;- [x]&lt;/span&gt; bar
+&lt;span class="k"&gt;- [ ]&lt;/span&gt; baz
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul class="checklist"&gt;
+&lt;li&gt;&lt;input type="checkbox" disabled&gt;&amp;nbsp;foo&lt;/li&gt;
+&lt;li&gt;&lt;input type="checkbox" disabled checked&gt;&amp;nbsp;bar&lt;/li&gt;
+&lt;li&gt;&lt;input type="checkbox" disabled&gt;&amp;nbsp;baz&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;This is a footnote content.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:xyz"&gt;
+&lt;p&gt;A footnote on the label &lt;strong&gt;xyz&lt;/strong&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:xyz" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="tutorial"></category><category term="pelican"></category><category term="markdown"></category></entry><entry><title>Simplify Theme</title><link href="https://vuquangtrong.github.io/simplify-theme/blog/simplify-theme.html" rel="alternate"></link><published>2019-10-02T10:00:00+07:00</published><updated>2019-10-10T20:00:00+07:00</updated><author><name>vuquangtrong</name></author><id>tag:vuquangtrong.github.io,2019-10-02:/simplify-theme/blog/simplify-theme.html</id><summary type="html">A simple and clean Bootstrap 4 based theme for Pelican&amp;nbsp;users</summary><content type="html">&lt;p&gt;A simple, clean, contentful &lt;a href="https://getbootstrap.com/docs/4.3/getting-started/introduction"&gt;Bootstrap 4&lt;/a&gt; theme for Pelican blogger.&lt;br&gt;
+You can use this theme to host programming articles, journals, or&amp;nbsp;galeries.&lt;/p&gt;
+&lt;h3 id="live-demo"&gt;Live&amp;nbsp;Demo&lt;/h3&gt;
+&lt;p&gt;Visit the live blog of the theme creator&amp;#8217;s blog: &lt;a href="https://vuquangtrong.github.io/simplify-theme"&gt;https://vuquangtrong.github.io/simplify-theme&lt;/a&gt; to see theme in action, which is also has some articles about theme&amp;#8217;s documents.&lt;br&gt;
+Source code &lt;a href="https://github.com/vuquangtrong/simplify-theme"&gt;simplify-theme&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="features"&gt;Features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Responsive layout for mobile and desktop&amp;nbsp;(Bootstrap)&lt;/li&gt;
+&lt;li&gt;Quick Search (Tipue Search and/or Google&amp;nbsp;Search)&lt;/li&gt;
+&lt;li&gt;OpenGraph (Facebook) and Twitter&amp;nbsp;support&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SEO&lt;/span&gt; with contentful metadata, ready for search&amp;nbsp;indexing&lt;/li&gt;
+&lt;li&gt;Table of Content sidebar with&amp;nbsp;highlight&lt;/li&gt;
+&lt;li&gt;Back to Top floating button in long&amp;nbsp;article&lt;/li&gt;
+&lt;li&gt;Related posts, next/previous&amp;nbsp;articles&lt;/li&gt;
+&lt;li&gt;Collapsible lists in tags and&amp;nbsp;categories&lt;/li&gt;
+&lt;li&gt;Social Sharing (AddThis or direct&amp;nbsp;links)&lt;/li&gt;
+&lt;li&gt;Comments on articles&amp;nbsp;(Diqus)&lt;/li&gt;
+&lt;li&gt;Rich Snippets (metadata, json-ld, sitemap,&amp;nbsp;robots.txt)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="install"&gt;Install&lt;/h3&gt;
+&lt;p&gt;Download the theme from &lt;a href="https://github.com/vuquangtrong/simplify-theme"&gt;simplify-theme&lt;/a&gt; or from &lt;a href="https://github.com/getpelican/pelican-themes"&gt;pelican-themes&lt;/a&gt;.&lt;br&gt;
+You may need to check the included example &lt;code&gt;pelicanconf.py&lt;/code&gt; and &lt;code&gt;publishconf.py&lt;/code&gt; for more&amp;nbsp;information.&lt;/p&gt;
+&lt;h3 id="integrations"&gt;Integrations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.addthis.com/"&gt;AddThis&lt;/a&gt;: add sharing&amp;nbsp;buttons&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://disqus.com/"&gt;Disqus&lt;/a&gt;: add comments&amp;nbsp;support&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.google.com.br/adsense/start/"&gt;Google AdSense&lt;/a&gt;: show&amp;nbsp;ads&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.google.com/analytics/web/"&gt;Google Analytics&lt;/a&gt;: track your&amp;nbsp;site&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.google.com/tagmanager/"&gt;Google Tag Manager&lt;/a&gt;: new version to track your&amp;nbsp;site&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matomo.org"&gt;Matomo&lt;/a&gt;: formerly &lt;a href="http://piwik.org/"&gt;Piwik Analytics&lt;/a&gt;: another site tracking&amp;nbsp;service&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="plugins-support"&gt;Plugins&amp;nbsp;Support&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/sitemap"&gt;sitemap&lt;/a&gt;: generate sitemap document, see &lt;a href="https://www.sitemaps.org"&gt;https://www.sitemaps.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/post_stats"&gt;post_stats&lt;/a&gt;: generate post statistics: words, estimated read time, tag&amp;nbsp;cloud&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/related_posts"&gt;related_posts&lt;/a&gt;: find relate posts to the reading&amp;nbsp;article&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/neighbors"&gt;neighbors&lt;/a&gt;: find next/preivious&amp;nbsp;article&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/share_post"&gt;share_post&lt;/a&gt;: share article via static buttons if don&amp;#8217;t use &lt;a href="http://www.addthis.com/"&gt;AddThis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="markdown-extensions"&gt;Markdown&amp;nbsp;extensions&lt;/h3&gt;
+&lt;p&gt;By default Pelican enables below extensions to process your markdown&amp;nbsp;files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;markdown.extensions.extra&lt;/code&gt; includes &lt;code&gt;abbr&lt;/code&gt;, &lt;code&gt;attr_list&lt;/code&gt;, &lt;code&gt;def_list&lt;/code&gt;, &lt;code&gt;fenced_code&lt;/code&gt;, &lt;code&gt;footnotes&lt;/code&gt;, and &lt;code&gt;tables&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;markdown.extensions.codehilite&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;markdown.extensions.meta&lt;/code&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Simplify&lt;/strong&gt; theme has some style configs to work with extra extenstions to render your page&amp;nbsp;better:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;markdown.extensions.sane_lists&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;markdown.extensions.toc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;markdown.extensions.nl2br&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;markdown_checklist.extension&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="customized-styles"&gt;Customized&amp;nbsp;styles&lt;/h3&gt;
+&lt;p&gt;The theme also bring to you a clean, simple, but contenful layout.&lt;br&gt;
+This &lt;a href="https://vuquangtrong.github.io/blog/simplify-article.html"&gt;Simplify Article&lt;/a&gt; will guide you how to write content in markdown and how it will be rendered on your&amp;nbsp;page.&lt;/p&gt;
+&lt;h3 id="preview"&gt;Preview&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="screenshot" src="https://vuquangtrong.github.io/simplify-theme/blog/tutorial/simplify_theme/screenshot.png"&gt;&lt;/p&gt;
+&lt;h3 id="how-to-contribute"&gt;How to&amp;nbsp;contribute&lt;/h3&gt;
+&lt;p&gt;Developing Simplify is my effort in some weekends. You are invited to help develop it further.&lt;br&gt;
+Feel free to fork the [repository][], and submit pull requests.&lt;br&gt;
+If you find any issues, or have a suggestion, then please open an&amp;nbsp;[issue][].&lt;/p&gt;
+&lt;h3 id="license"&gt;License&lt;/h3&gt;
+&lt;p&gt;Simplify is released under the &lt;a href="https://spdx.org/licenses/CC-BY-4.0.html"&gt;Creative Commons Attribution 4.0 International&lt;/a&gt; license.&lt;br&gt;
+All contributors will be listed in &lt;a href="AUTHORS.md"&gt;Authors&lt;/a&gt; page. It maybe imcomplete but it is to honor in all they did.&lt;br&gt;
+I would like you to &lt;strong&gt;have some words to refer to authors work in your page&amp;#8217;s footer&lt;/strong&gt;. Thank you in&amp;nbsp;advanced!&lt;/p&gt;</content><category term="tutorial"></category><category term="pelican"></category><category term="bootstrap"></category><category term="markdown"></category></entry><entry><title>Setup blog with Bootstrap and Pelican</title><link href="https://vuquangtrong.github.io/simplify-theme/blog/setup-blog-with-bootstrap-and-pelican.html" rel="alternate"></link><published>2019-10-01T10:00:00+07:00</published><updated>2019-10-10T20:00:00+07:00</updated><author><name>vuquangtrong</name></author><id>tag:vuquangtrong.github.io,2019-10-01:/simplify-theme/blog/setup-blog-with-bootstrap-and-pelican.html</id><summary type="html">How to create a blog with a simple Bootstrap theme and configure Pelican to generate your own&amp;nbsp;site</summary><content type="html">&lt;h3 id="install-pelican"&gt;Install&amp;nbsp;Pelican&lt;/h3&gt;
+&lt;p&gt;It&amp;#8217;s very simple to install Pelican and write your first&amp;nbsp;post:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/install.html"&gt;Install&amp;nbsp;Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/content.html"&gt;Write&amp;nbsp;content&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You may need to read the manual of &lt;a href="https://docs.getpelican.com/en/stable/settings.html"&gt;Pelican Settings&lt;/a&gt;.&lt;br&gt;
+There are many settings to configure how Pelican will render your article. You can use &lt;code&gt;plugin&lt;/code&gt;, &lt;code&gt;theme&lt;/code&gt;, &lt;code&gt;extension&lt;/code&gt; too. Read more&amp;nbsp;in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-plugins"&gt;Pelican&amp;nbsp;Plugins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-themes"&gt;Pelican&amp;nbsp;Themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://jinja.palletsprojects.com/en/master/extensions"&gt;jinja2&amp;nbsp;Extensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://python-markdown.github.io/extensions"&gt;Markdown&amp;nbsp;Extensions&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="apply-theme"&gt;Apply&amp;nbsp;theme&lt;/h3&gt;
+&lt;p&gt;You will need to apply a theme or create a new theme.&lt;br&gt;
+By default, Pelican provides &lt;code&gt;simple&lt;/code&gt; as a base theme, but you probaly want to change your blog&amp;nbsp;appearance.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/themes.html"&gt;Theme folder&amp;nbsp;structure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-themes"&gt;Pelican&amp;nbsp;Themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="create-a-theme"&gt;Create a&amp;nbsp;theme&lt;/h3&gt;
+&lt;p&gt;This a the main purpose of this article. If there is no theme that&amp;#8217;s fit to your need, you probably will &lt;strong class="badge badge-danger"&gt;do it&amp;nbsp;yourself!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Start to create a simple page with &lt;a href="https://getbootstrap.com/docs/4.3/getting-started/introduction"&gt;Bootstrap&lt;/a&gt;. &lt;a class="small text-info" data-toggle="collapse" data-target="#codeTemplate" aria-controls="codeTemplate" aria-expanded="false" aria-label="Toggle code tmeplate" href="#"&gt;toggle code&amp;nbsp;template&lt;/a&gt;&lt;/p&gt;
+&lt;div class="collapse" id="codeTemplate"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;!&lt;/span&gt;&lt;span class="nv"&gt;doctype&lt;/span&gt; &lt;span class="nv"&gt;html&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;html&lt;/span&gt; &lt;span class="nv"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;en&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;head&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;!--&lt;/span&gt; &lt;span class="nv"&gt;Required&lt;/span&gt; &lt;span class="nv"&gt;meta&lt;/span&gt; &lt;span class="nv"&gt;tags&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;meta&lt;/span&gt; &lt;span class="nv"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;utf-8&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;meta&lt;/span&gt; &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;viewport&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;width=device-width, initial-scale=1, shrink-to-fit=no&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class="o"&gt;&amp;lt;!--&lt;/span&gt; &lt;span class="nv"&gt;Bootstrap&lt;/span&gt; &lt;span class="nv"&gt;CSS&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;link&lt;/span&gt; &lt;span class="nv"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;stylesheet&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;integrity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;crossorigin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;anonymous&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nv"&gt;Hello&lt;/span&gt;, &lt;span class="nv"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;head&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;body&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nv"&gt;Hello&lt;/span&gt;, &lt;span class="nv"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class="o"&gt;&amp;lt;!--&lt;/span&gt; &lt;span class="nv"&gt;Optional&lt;/span&gt; &lt;span class="nv"&gt;JavaScript&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;!--&lt;/span&gt; &lt;span class="nv"&gt;jQuery&lt;/span&gt; &lt;span class="nv"&gt;first&lt;/span&gt;, &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="nv"&gt;Popper&lt;/span&gt;.&lt;span class="nv"&gt;js&lt;/span&gt;, &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="nv"&gt;Bootstrap&lt;/span&gt; &lt;span class="nv"&gt;JS&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;script&lt;/span&gt; &lt;span class="nv"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;https://code.jquery.com/jquery-3.3.1.slim.min.js&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;integrity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;crossorigin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;anonymous&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;script&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;script&lt;/span&gt; &lt;span class="nv"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;integrity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;crossorigin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;anonymous&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;script&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;script&lt;/span&gt; &lt;span class="nv"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;integrity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;crossorigin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;anonymous&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;script&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;body&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;html&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;</content><category term="tutorial"></category><category term="pelican"></category><category term="bootstrap"></category><category term="markdown"></category></entry></feed>

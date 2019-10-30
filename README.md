@@ -5,7 +5,7 @@ You can use this theme to host programming articles, journals, or galeries.
 ### Live Demo
 
 Visit the live blog of the theme creator's blog: <https://vuquangtrong.github.io> to see theme in action, which is also has some articles about theme's documents.
-Source code [simplify-bootstrap-theme](https://github.com/vuquangtrong/simplify-bootstrap-theme)
+Source code [simplify-theme](https://github.com/vuquangtrong/simplify-theme)
 
 ### Features
 
@@ -23,7 +23,7 @@ Source code [simplify-bootstrap-theme](https://github.com/vuquangtrong/simplify-
 
 ### Install
 
-Download the theme from [simplify-bootstrap-theme](https://github.com/vuquangtrong/simplify-bootstrap-theme) or from [pelican-themes](https://github.com/getpelican/pelican-themes).
+Download the theme from [simplify-theme](https://github.com/vuquangtrong/simplify-theme) or from [pelican-themes](https://github.com/getpelican/pelican-themes).
 You may need to check the included example `pelicanconf.py` and `publishconf.py` for more information.
 
 ### Integrations

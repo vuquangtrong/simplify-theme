@@ -12,7 +12,7 @@
             </div>
             <div class="col-4 small" style="margin-top: 0.5rem;">
                 {% if ADD_THIS_ID and (page_name or page or article) %}
-                    <div class="text-right mb-2 small">
+                    <div class="text-right mb-2 small" style="height: 26px">
                         <div class="addthis_inline_share_toolbox"></div>
                     </div>
                 {% endif %}
@@ -35,6 +35,7 @@
 		{% endfor %}
 	</div>
     -->
+    
     <!-- Tags cloud -->
     <ul class="tagcloud">
         {% if tag_cloud %}
@@ -49,34 +50,29 @@
         {% endif %}
     </ul>
 
-    <!-- Articles in each tag -->
-    <div class="row">
-        <div class="col-lg-9 mx-auto">
-            <!-- Accordion -->
-            <div id="accordionList" class="accordion shadow">
-                {% for tag, articles in tags|sort %}
-                    <!-- Accordion items -->
-                    <div class="card">
-                        <div id="heading_{{ tag|lower }}" class="card-header bg-white shadow-sm border-0">
-                            <h2 class="mb-0">
-                                <button type="button" data-toggle="collapse" data-target="#collapse{{ tag|lower }}" aria-expanded="false" aria-controls="collapse{{ tag|lower }}" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
-                                    {{ tag|lower }}  <span class="badge badge-warning" style="font-size: small;">{{ articles|count }}</span>
-                                </button>
-                            </h2>
-                        </div>
-                        <!-- Item list -->
-                        <div id="collapse{{ tag|lower }}" aria-labelledby="heading_{{ tag|lower }}" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
-                            {% for article in articles %}
-                            <div class="card-body border-bottom">
-                                <a  class="m-0" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a><br>
-                                <span class="small">by <a href="{{ SITEURL }}/{{ article.author.url }}" style="color: darkblue;">{{ article.author }}</a>, post on <span class="text-success">{{ article.locale_date }}</span></span>
-                            </div>
-                            {% endfor %}
-                        </div>
+    <!-- Accordion -->
+    <div id="accordionList" class="accordion shadow">
+        {% for tag, articles in tags|sort %}
+            <!-- Accordion items -->
+            <div class="card">
+                <div id="heading_{{ tag|lower }}" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapse{{ tag|lower }}" aria-expanded="false" aria-controls="collapse{{ tag|lower }}" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            {{ tag|lower }}  <span class="badge badge-warning" style="font-size: small;">{{ articles|count }}</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapse{{ tag|lower }}" aria-labelledby="heading_{{ tag|lower }}" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    {% for article in articles %}
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a><br>
+                        <span class="small">by <a href="{{ SITEURL }}/{{ article.author.url }}" style="color: darkblue;">{{ article.author }}</a>, post on <span class="text-success">{{ article.locale_date }}</span></span>
                     </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
 
     <!-- Google Adsense -->

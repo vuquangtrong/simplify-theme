@@ -28,7 +28,7 @@ DATE_FORMATS = {
 
 # Build settings
 PATH = 'content'
-THEME = './simplify-bootstrap-theme'
+THEME = '../' # parent folder
 
 ARTICLE_PATHS = ['blog']
 ARTICLE_URL = 'blog/{slug}.html'
@@ -50,14 +50,14 @@ DIRECT_TEMPLATES = [
 ]
 
 # below pages are not included in the theme, but you want to customize them in html and layout
-TEMPLATE_PAGES = {
-    'pages/test.html': 'pages/test.html'
-}
+# TEMPLATE_PAGES = {
+#     'pages/test.html': 'pages/test.html'
+# }
 
 DEFAULT_PAGINATION = 10
 DEFAULT_DATE = (2010, 10, 10, 10, 10, 10)
 
-OUTPUT_PATH = 'output/'
+OUTPUT_PATH = 'output'
 DELETE_OUTPUT_DIRECTORY = True
 
 # Feed generation, usually not needed when developing
@@ -79,7 +79,7 @@ STATIC_PATHS = [
 
 # Plugins
 PLUGIN_PATHS = [
-    '../pelican-plugins'
+    '../../pelican-plugins'
 ]
 
 PLUGINS = [
@@ -156,7 +156,7 @@ SOCIAL = {
 DISQUS_SITENAME = "vuquangtrong-github-io"
 
 # Sharing
-SHARE_POST = True # old style and static sharing buttons for articles, use AddThis for tracking purpose
+# SHARE_POST = True # old style and static sharing buttons for articles, use AddThis for tracking purpose
 ADD_THIS_ID = "ra-5d9ffca0db80069e" # can be on index, any article or page, and can track user activities
 
 # Tracking

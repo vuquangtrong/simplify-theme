@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+
+        <!-- Required metadata tags -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Default metadata -->
+    <meta name="author" content="vuquangtrong" />
+    <meta name="description" content="Show how an article is rendered by Markdown" />
+    <meta name="keywords" content="pelican, markdown">
+<meta property="og:site_name" content="Simplify" />
+<meta property="og:title" content="Simplify Article" />
+<meta property="og:description" content="Show how an article is rendered by Markdown" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://vuquangtrong.github.io/simplify-theme/blog/simplify-article.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-08 10:00:00+07:00" />
+<meta property="article:modified_time" content="2019-10-10 20:00:00+07:00" />
+<meta property="article:author" content="https://vuquangtrong.github.io/simplify-theme/author/vuquangtrong.html">
+<meta property="article:section" content="tutorial" />
+	<meta property="article:tag" content="pelican" />
+	<meta property="article:tag" content="markdown" />
+	<meta property="og:image" content="https://vuquangtrong.github.io/simplify-theme/logo.png">
+
+        <!-- Site Claim -->
+
+
+        <!-- Title -->
+        <title>
+    Simplify Article &ndash; Simplify
+        </title>
+        
+        <!-- Icon -->
+        <link rel="shortcut icon" href="https://vuquangtrong.github.io/simplify-theme/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="https://vuquangtrong.github.io/simplify-theme/favicon.ico" type="image/x-icon">
+
+        <!-- Search engine -->
+            <meta name="robots" content="index, follow" />
+
+        <!-- Feeds -->
+            <link href="https://vuquangtrong.github.io/simplify-theme/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Simplify Full Atom Feed" />
+
+
+
+
+            <link href="https://vuquangtrong.github.io/simplify-theme/feeds/tutorial.atom.xml" type="application/atom+xml" rel="alternate" title="Simplify Categories Atom Feed" />
+
+
+
+
+        <!-- Styles -->
+        <!--
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/css/bootstrap.min.css">
+        -->
+        <link rel="stylesheet" href="https://vuquangtrong.github.io/simplify-theme/theme/bootstrap/bootstrap.min.css">
+        <!--
+        <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css">
+        -->
+            <link rel="stylesheet" href="https://vuquangtrong.github.io/simplify-theme/theme/extra/bootstrap-toc.min.css">
+        <link rel="stylesheet" href="https://vuquangtrong.github.io/simplify-theme/theme/pygment/friendly.min.css">
+        <!--
+        <link rel="stylesheet" href="https://vuquangtrong.github.io/simplify-theme/theme/extra/admonition.min.css">
+        -->
+        <link rel="stylesheet" href="https://vuquangtrong.github.io/simplify-theme/theme/style.css">
+
+        <!-- Google Analytics -->
+<script>
+(function(i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-42618265-2', 'auto');
+ga('send', 'pageview');
+</script>
+        <!-- Google Global Site Tag -->
+
+        <!-- Google Tag Manager -->
+
+        <!-- Google Adsense -->
+
+        <!-- Heap Analytic -->
+
+        <!-- Piwik Tracking -->
+
+        <!-- Matomo Tracking -->
+
+</head>
+
+<!-- Body -->
+<body class="d-flex flex-column" data-spy="scroll" data-target="#toc" data-offset="0" style="position: relative;">
+    <!-- Top anchor -->
+    <a href="#" id="backToTop" style="display: none; z-index: 1;" title="Back to top"><span></span></a>
+
+    <!-- Google tag manager -->
+
+    <!-- Navigation -->
+    <nav class="flex-shrink-0 navbar navbar-expand-md navbar-expand-lg navbar-dark bg-dark text-light shadow-sm">
+        <!-- Logo -->
+        <a class="navbar-brand" href="https://vuquangtrong.github.io/simplify-theme">Simplify</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon small"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <!-- Page links -->
+            <ul class="navbar-nav mr-auto text-center">
+                <li class="nav-item ">                           
+                    <a class="nav-link" href="https://vuquangtrong.github.io/simplify-theme">
+                        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+                            <path d="M21 13v10h-6v-6h-6v6h-6v-10h-3l12-12 12 12h-3zm-1-5.907v-5.093h-3v2.093l3 3z" fill="currentColor"></path>
+                        </svg>
+                        Home <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://vuquangtrong.github.io/simplify-theme/categories.html">
+                        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+                            <path d="M16 6h-8v-6h8v6zm-8 12h-8v6h8v-6zm16 0h-8v6h8v-6zm-11-7v-3h-2v3h-8v5h2v-3h14v3h2v-5h-8z" fill="currentColor"></path>
+                        </svg>
+                        Categories
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://vuquangtrong.github.io/simplify-theme/tags.html">
+                        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+                            <path d="M10.605 0h-10.605v10.609l13.391 13.391 10.609-10.604-13.395-13.396zm-4.191 6.414c-.781.781-2.046.781-2.829.001-.781-.783-.781-2.048 0-2.829.782-.782 2.048-.781 2.829-.001.782.782.781 2.047 0 2.829z" fill="currentColor"></path>
+                        </svg>
+                        Tags
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://vuquangtrong.github.io/simplify-theme/archives.html">
+                        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+                            <path d="M1.8 9l-.8-4h22l-.8 4h-2.029l.39-2h-17.122l.414 2h-2.053zm18.575-6l.604-2h-17.979l.688 2h16.687zm3.625 8l-2 13h-20l-2-13h24zm-8 4c0-.552-.447-1-1-1h-6c-.553 0-1 .448-1 1s.447 1 1 1h6c.553 0 1-.448 1-1z" fill="currentColor"></path>
+                        </svg>
+                        Archives
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://vuquangtrong.github.io/simplify-theme/pages/about.html">
+                        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+                            <path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z" fill="currentColor"></path>
+                        </svg>
+                        About
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Search form -->
+            <form class="form-inline text-center" action="https://vuquangtrong.github.io/simplify-theme/search.html">
+                <input class="form-control w-100 bg-dark text-light text-center border-0 p-2" type="text" name="q" pattern=".{3,}" title="At least 3 characters" required="" placeholder="Type here to search" aria-label="Search">
+            </form>
+
+            <!-- Social links -->
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://facebook.com/trongvq">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>Facebook</title>
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/vuquangtrong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>Github</title>
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/vqtrong">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>Linkedin</title>
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/trongvq">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>Twitter</title>
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Full page -->
+    <div class="flex-shrink-0 flex-grow-1">
+
+        <!-- Header -->
+        <header class="bg-dark text-light shadow-sm pt-3 pb-2">
+	<div class="container">
+		<h3 id="simplify-article">Simplify&nbsp;Article</h3>
+		<p style="font-size:larger;">Show how an article is rendered by&nbsp;Markdown</p>
+        <div class="row mx-auto mt-3">
+            <div class="col-xs-12 col-sm-12 col-md-6 text-left" style="padding: 0">
+                <a href="https://vuquangtrong.github.io/simplify-theme/author/vuquangtrong.html" class="card-link">vuquangtrong</a>
+                <span class="card-link text-success">
+                    <span class="post-date" title="Post date">Oct 08, 2019</span>
+                    <span class="text-info modified-date" title="Updated date">
+                            Oct 10, 2019
+                    </span>
+                </span>
+                    <span class="card-link text-secondary" title="~1490 words">6 mins</span>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 text-right" style="padding: 0">
+                <a class="badge badge-success" href="https://vuquangtrong.github.io/simplify-theme/category/tutorial.html">tutorial</a>
+                    <a class="badge badge-info" href="https://vuquangtrong.github.io/simplify-theme/tag/pelican.html">pelican</a>
+                    <a class="badge badge-info" href="https://vuquangtrong.github.io/simplify-theme/tag/markdown.html">markdown</a>
+            </div>
+        </div>
+	</div>
+        </header>
+
+        <!-- Main -->
+        <main class="py-3">
+                <div class="container">
+                    <!-- Sharing -->
+
+                    <!-- Content -->
+    <!-- 2 columns layout -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-10">
+
+                <!-- Sharing -->
+                    <div class="text-right mb-2 small" style="height: 26px">
+                        <div class="addthis_inline_share_toolbox"></div>
+                    </div>
+
+                <!-- Article -->
+                <p>Following content is for testing Markdown-to-<span class="caps">HTML</span> generator with various Markdown settings including standard syntax and extended <a href="https://python-markdown.github.io/extensions">Markdown Extensions</a>. To setup Markdown settings in Pelican, please check this article: <a href="https://vuquangtrong.github.io/simplify-theme/blog/setup-blog-with-bootstrap-and-pelican.html" title="Setup blog with Pelican">Setup blog with Pelican</a>.</p>
+<p class="alert alert-info">You should know about <strong><span class="caps">HTML</span></strong>, <strong><span class="caps">CSS</span></strong> and probably <strong class="text-danger">Markdown</strong><br></p>
+<hr>
+<h3 id="markdown-settings">Markdown&nbsp;Settings</h3>
+<p>Here are the list of Markdown extensions will be used to generate this&nbsp;article.</p>
+<div class="highlight"><pre><span></span><span class="n">MARKDOWN</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;extensions&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="c1"># official extensions</span>
+        <span class="s1">&#39;markdown.extensions.extra&#39;</span><span class="p">,</span> <span class="c1"># include extensions: abbr, attr_list, def_list, fenced_code, footnotes, tables</span>
+        <span class="s1">&#39;markdown.extensions.codehilite&#39;</span><span class="p">,</span> <span class="c1"># to generate code color scheme using pygments</span>
+        <span class="s1">&#39;markdown.extensions.meta&#39;</span><span class="p">,</span> <span class="c1"># to parse key:value pairs at the begining of file</span>
+        <span class="s1">&#39;markdown.extensions.sane_lists&#39;</span><span class="p">,</span><span class="c1"># for better list </span>
+        <span class="s1">&#39;markdown.extensions.toc&#39;</span><span class="p">,</span> <span class="c1"># add Table of Content</span>
+        <span class="s1">&#39;markdown.extensions.nl2br&#39;</span><span class="p">,</span> <span class="c1"># easily to add new line, but make attr_list and legacy_attrs hard to control</span>
+        <span class="c1">#&#39;markdown.extensions.admonition&#39;, # to make  alert box</span>
+        <span class="c1">#&#39;markdown.extensions.legacy_attrs&#39;, # insert attribs into element, but markdown already has a built-in function that do the same thing</span>
+        <span class="c1">#&#39;markdown.extensions.legacy_em&#39;, # to use legacy emphasis</span>
+        <span class="c1">#&#39;markdown.extensions.smarty&#39;, # converts ASCII dashes, quotes and ellipses to their HTML entity equivalents</span>
+        <span class="c1">#&#39;markdown.extensions.wikilinks&#39;,</span>
+
+        <span class="c1"># 3rd party extensions</span>
+        <span class="c1">#&#39;markdown_captions&#39;, # convert &lt;img&gt; to &lt;figure&gt; and &lt;figcaption&gt;</span>
+        <span class="c1">#&#39;markdown_checklist.extension&#39;, # show checkbox in list</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;extension_configs&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;markdown.extensions.codehilite&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;css_class&#39;</span><span class="p">:</span> <span class="s1">&#39;highlight&#39;</span><span class="p">},</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;output_format&#39;</span><span class="p">:</span> <span class="s1">&#39;html5&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr>
+<h3 id="paragraphs">Paragraphs</h3>
+<div class="highlight"><pre><span></span>Emphasis a word or a phrase: <span class="ge">*italic*</span> or <span class="gs">**bold** or ***bold and italic***</span> or <span class="sb">`in-line code`</span>.
+Show input keys: &lt;kbd&gt;Ctrl&lt;/kbd&gt; &lt;kbd&gt;Alt&lt;/kbd&gt; &lt;kbd&gt;Del&lt;/kbd&gt;.
+</pre></div>
+
+
+<p>Emphasis a word or a phrase: <em>italic</em> or <strong>bold</strong> or <strong><em>bold and italic</em></strong> or <code>in-line code</code>.<br>
+Show input keys: <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Del</kbd>.</p>
+<p>As mentioned in <a href="https://stackoverflow.com/questions/4823468/comments-in-markdown">how to comments in markdown</a> you can (ab)use the link labels syntax to write your comments.<br>
+Those lines will not be processed, so they are not included in rendered page nor page&#8217;s source&nbsp;code.</p>
+<div class="highlight"><pre><span></span>[<span class="nl">//</span>]: <span class="na"># (This may be the most platform independent comment)</span>
+</pre></div>
+
+
+<hr>
+<h3 id="markdown-in-html-tags">Markdown in <span class="caps">HTML</span>&nbsp;tags</h3>
+<p>By default, text in <span class="caps">HTML</span> tags is not rendered. To support Markdown syntax in <span class="caps">HTML</span> tags, add <code>markdown="1"</code> into the&nbsp;tag.</p>
+<div class="highlight"><pre><span></span>&lt;div markdown=&quot;0&quot;&gt;
+This text is not <span class="gs">**rendered**</span>.
+&lt;/div&gt;
+&lt;div markdown=&quot;1&quot;&gt;
+This text is <span class="gs">**rendered**</span> well.
+&lt;/div&gt;
+</pre></div>
+
+
+<div>
+This text is not **rendered**.
+</div>
+
+<div>
+<p>This text is <strong>rendered</strong>&nbsp;well.</p>
+</div>
+<hr>
+<h3 id="attribute-lists">Attribute&nbsp;Lists</h3>
+<h4 id="official-extension">Official&nbsp;extension</h4>
+<p>Element can have some attributes by using <code>markdown.extensions.attr_list</code> extension.<br>
+This provides syntax: <code>{: #someid .someclass somekey='some value' }</code> to add attributes to a block or a span element.<br>
+To use with a <strong>block</strong> element, the attribute list should be defined <em>on the last line of the block</em>. <br>
+To use with a <strong>span</strong> element, the attribute list should be placd <em>right after the generated span without space</em>.</p>
+<div class="highlight"><pre><span></span>A paragraph with dark background and light text, using <span class="sb">`attr_list`</span> extension. <span class="ge">*Attribute list can be applied to a span element*</span>{: .text-warning} if the attribute list is added right after the span without any space.{: .bg-dark .text-light .p-1}
+</pre></div>
+
+
+<p>A paragraph with dark background and light text, using <code>attr_list</code> extension. <em class="text-warning">Attribute list can be applied to a span element</em> if the attribute list is added right after the span without any space.{: .bg-dark .text-light&nbsp;.p-1}</p>
+<h4 id="build-in-parser">Build-in&nbsp;parser</h4>
+<p>Some Markdown version already has a built-in parser to process attribute lists. For example in Markdown <code>3.1.1</code>, below code generate the same <span class="caps">HTML</span>&nbsp;block.</p>
+<div class="highlight"><pre><span></span>Use built-in parser
+![<span class="nt">icon</span>](<span class="na">{static}icon.png &quot;icon&quot;</span>){id=&quot;icon&quot; class=&quot;icon mx-auto&quot; style=&quot;display:block&quot;}
+
+Use attr_list extension
+![<span class="nt">icon</span>](<span class="na">{static}icon.png &quot;icon&quot;</span>){: <span class="ni">#icon</span> .icon .mx-auto style=display:block}
+</pre></div>
+
+
+<p><img alt="icon" class="icon mx-auto" id="icon" src="https://vuquangtrong.github.io/simplify-theme/blog/tutorial/simplify_article/icon.png" style="display:block" title="icon"></p>
+<div class="highlight"><pre><span></span>This is a sample sentence in green.
+{class=&quot;text-success text-center&quot;}
+</pre></div>
+
+
+<p class="text-success text-center">This is a sample sentence in green.<br></p>
+<h4 id="deprecated-extenstion">Deprecated&nbsp;extenstion</h4>
+<p>Another extension that also adds attribute into block or element is <code>markdown.extensions.legacy_attrs</code>. This extension has been deprecated in favor of <a href="#attribute-lists">Attribute Lists</a>.<br>
+Attributes are defined by including the syntax <code>{@key=value}</code> within the&nbsp;element.</p>
+<div class="highlight"><pre><span></span>{@class=bg-dark text-warning p-1}A paragraph with dark background and yellow text, using <span class="sb">`legacy_attrs`</span> extension.  
+<span class="ge">_This text won&#39;t be formatter_</span>, but <span class="gs">__this text will be formatted__</span> by the latter directive at the end of this block{@class=text-success}
+
+if nl2br extenstion is disabled, it will be more readable as below
+
+{@class=bg-dark text-warning p-1}
+A paragraph with dark background and yellow text, using <span class="sb">`legacy_attrs`</span> extension.  
+<span class="ge">_This text won&#39;t be formatter_</span>, but <span class="gs">__this text will be formatted__</span> by the latter directive at the end of this block{@class=text-success}
+</pre></div>
+
+
+<hr>
+<h3 id="blockquote">Blockquote</h3>
+<p>Using default directive <strong><code>&gt;</code></strong> with <code>legacy_attrs</code> or <code>attr_list</code> to get better&nbsp;result.</p>
+<div class="highlight"><pre><span></span><span class="k">&gt; </span><span class="ge">I do love you so much!</span>
+<span class="k">&gt; </span><span class="ge">_Henry_</span>
+</pre></div>
+
+
+<blockquote>
+<p>I do love you so much!<br>
+<em>Henry</em></p>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="k">&gt; </span><span class="ge">I do love you so much!</span>
+<span class="k">&gt; </span><span class="ge">_Henry_{class=blockquote-footer}</span>
+
+or
+
+<span class="k">&gt; </span><span class="ge">I do love you so much!</span>
+<span class="k">&gt; </span><span class="ge">_Henry_{: .blockquote-footer}</span>
+</pre></div>
+
+
+<blockquote>
+<p>I do love you so much!<br>
+<em class="blockquote-footer">Henry</em></p>
+<p>I do love you so much!<br>
+<em class="blockquote-footer">Henry</em></p>
+</blockquote>
+<hr>
+<h3 id="images">Images</h3>
+<p>Using <code>&lt;img&gt;</code> tag is enough to show image. Some people use <a href="https://github.com/evidlo/markdown_captions">markdown_captions</a> extension to convert <code>&lt;img&gt;</code> to <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> which are new in <span class="caps">HTML5</span>.</p>
+<p>Adding <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> manually can be done by using <a href="#markdown-in-html-tags">Markdown in <span class="caps">HTML</span> tags</a>, but it doesn&#8217;t look good in markdown&nbsp;file.</p>
+<div class="highlight"><pre><span></span>&lt;figure markdown=&quot;1&quot;&gt;
+![<span class="nt">my code doesn&#39;t work</span>](<span class="na">{static}my-code-doesn_t-work.jpg &quot;my code doesn&#39;t work&quot;</span>)&lt;figcaption class=&quot;img-caption&quot;&gt;_my code doesn&#39;t work &amp;copy; [<span class="nt">nerd4life.studio</span>](<span class="na">https://nerd4life.studio/blogs/nerd4life-comic/my-code-doesnt-work</span>)_&lt;/figcaption&gt;
+&lt;/figure&gt;
+</pre></div>
+
+
+<p>There is another way to add caption and credit to&nbsp;image:</p>
+<div class="highlight"><pre><span></span>![<span class="nt">my code doesn&#39;t work</span>](<span class="na">{static}my-code-doesn_t-work.jpg &quot;my code doesn&#39;t work&quot;</span>)_my code doesn&#39;t work &amp;copy; [<span class="nt">nerd4life.studio</span>](<span class="na">https://nerd4life.studio/blogs/nerd4life-comic/my-code-doesnt-work</span>)_{: .img-caption}
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">img-caption</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#6c757d</span><span class="cp">!important</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="cp">!important</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">80</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="mi">400</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><img alt="my code doesn't work" src="https://vuquangtrong.github.io/simplify-theme/blog/tutorial/simplify_article/my-code-doesn_t-work.jpg" title="my code doesn't work"><em class="img-caption">my code doesn&#8217;t work &copy; <a href="https://nerd4life.studio/blogs/nerd4life-comic/my-code-doesnt-work">nerd4life.studio</a></em></p>
+<hr>
+<h3 id="standard-codeblock">Standard&nbsp;Codeblock</h3>
+<p>Using <em>Standard Codeblock</em> with correct indent, code can be shown as below type of&nbsp;paragraph</p>
+<p><strong>Show line number</strong><br>
+use <em>Shebang</em> <code>#!</code> instead of <code>:::</code> to render line&nbsp;number.</p>
+<div class="highlight"><pre><span></span><span class="gh">#</span>!python hl_lines=&quot;1 3&quot;
+<span class="gh">#</span> This line is emphasized
+<span class="gh">#</span> This line isn&#39;t
+<span class="gh">#</span> This line is emphasized too
+</pre></div>
+
+
+<p>will&nbsp;be:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll"><span class="c1"># This line is emphasized</span>
+</span><span class="c1"># This line isn&#39;t</span>
+<span class="hll"><span class="c1"># This line is emphasized too</span>
+</span></pre></div>
+</td></tr></table>
+
+<p><strong>In&nbsp;paragraph</strong></p>
+<div class="highlight"><pre><span></span>:::python hl_lines=&quot;1 3&quot;
+<span class="gh">#</span> This line is emphasized
+<span class="gh">#</span> This line isn&#39;t
+<span class="gh">#</span> This line is emphasized too
+</pre></div>
+
+
+<p>will&nbsp;be:</p>
+<div class="highlight"><pre><span></span><span class="hll"><span class="c1"># This line is emphasized</span>
+</span><span class="c1"># This line isn&#39;t</span>
+<span class="hll"><span class="c1"># This line is emphasized too</span>
+</span></pre></div>
+
+
+<p><strong>In nested list&nbsp;item</strong></p>
+<div class="highlight"><pre><span></span><span class="k">-</span> First item
+
+    :::python hl_lines=&quot;1 3&quot;
+    # This line is emphasized
+    # This line isn&#39;t
+    # This line is emphasized too
+
+<span class="k">-</span> Second item
+<span class="k">-</span> Third item
+</pre></div>
+
+
+<p>will&nbsp;be:</p>
+<ul>
+<li>
+<p>First&nbsp;item</p>
+<div class="highlight"><pre><span></span><span class="hll"><span class="c1"># This line is emphasized</span>
+</span><span class="c1"># This line isn&#39;t</span>
+<span class="hll"><span class="c1"># This line is emphasized too</span>
+</span></pre></div>
+
+
+</li>
+<li>
+<p>Second&nbsp;item</p>
+</li>
+<li>Third&nbsp;item</li>
+</ul>
+<p><strong>In&nbsp;blockquote</strong></p>
+<div class="highlight"><pre><span></span><span class="k">&gt; </span><span class="ge">This snippet of code</span>
+&gt; 
+    #!python
+    from <span class="gs">__future__</span> import me
+    me.teleportTo(now)
+</pre></div>
+
+
+<p>will&nbsp;be:</p>
+<blockquote>
+<p>This snippet of&nbsp;code</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">me</span>
+<span class="n">me</span><span class="o">.</span><span class="n">teleportTo</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+</blockquote>
+<hr>
+<h3 id="fenced-codeblock">Fenced&nbsp;Codeblock</h3>
+<p>Using <em>Fenced Codeblock</em> allow the color highlight scheme to show in Markdown editor,<br>
+but this won&#8217;t support to show codeblock in list item or blockquote, and won&#8217;t show line&nbsp;number.</p>
+<div class="highlight"><pre><span></span>````python hl_lines=&quot;2&quot;
+<span class="gh">#</span> You can highlight a line by adding hl_lines=&quot;2&quot;
+<span class="gh">#</span> so this line will be highlighted
+````
+</pre></div>
+
+
+<p>will&nbsp;be:</p>
+<div class="highlight"><pre><span></span><span class="c1"># You can highlight a line by adding hl_lines=&quot;2&quot;</span>
+<span class="hll"><span class="c1"># so this line will be highlighted</span>
+</span></pre></div>
+
+
+<p>This is how codeblok looks line in <code>SublimeText 3</code> using <code>MarkdownExtended</code> and <code>MonokaiExtended</code> packages<br>
+<em>Standard Codeblock</em><br>
+<img alt="standard_codeblock" src="https://vuquangtrong.github.io/simplify-theme/blog/tutorial/simplify_article/standard_codeblock.jpg" title="standard_codeblock"><br>
+<em>Fenced Codenlock</em><br>
+<img alt="fenced_codeblock" src="https://vuquangtrong.github.io/simplify-theme/blog/tutorial/simplify_article/fenced_codeblock.jpg" title="fenced_codeblock"></p>
+<p>To add line number, a small <code>jQuery</code> code will be used to generate texts and few <code>CCS</code> styles will be used to format&nbsp;them</p>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">pre</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;pre&#39;</span><span class="p">),</span>
+        <span class="nx">pl</span> <span class="o">=</span> <span class="nx">pre</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">pl</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">pre</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&lt;span class=&quot;line-number&quot;&gt;&lt;/span&gt;&#39;</span> <span class="o">+</span> <span class="nx">pre</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span> <span class="o">+</span> <span class="s1">&#39;&lt;span class=&quot;cl&quot;&gt;&lt;/span&gt;&#39;</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nx">pre</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">).</span><span class="nx">length</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nx">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">line_num</span> <span class="o">=</span> <span class="nx">pre</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+            <span class="nx">line_num</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="s1">&#39;&lt;span&gt;&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})();</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="nt">pre</span> <span class="p">.</span><span class="nc">line-number</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">0</span> <span class="mi">-1</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">border-right</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddd</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">pre</span> <span class="p">.</span><span class="nc">line-number</span> <span class="nt">span</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mf">.5</span><span class="kt">em</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#ccc</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">pre</span> <span class="p">.</span><span class="nc">cl</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr>
+<h3 id="table">Table</h3>
+<p>Table with alignment and format text&nbsp;inside.</p>
+<p>There&#8217;s still no effective method to add class into <code>&lt;table&gt;</code> tag in Markdown.<br>
+We can use <code>jQuery</code> <code>addClass()</code> function to do this&nbsp;trick:</p>
+<div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;table table-hover table-sm table-bordered&quot;</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;thead&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;thead-light&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Define a&nbsp;table</p>
+<div class="highlight"><pre><span></span>| Level                      | Description                         | Default                       |
+| :---                       | :---                                |                          ---: |
+| Debug                      | All information                     | <span class="ge">_Off_</span>{: .badge .badge-danger} |
+| Info {: .text-info}        | Useful infomation                   | <span class="ge">_Off_</span>{: .badge .badge-danger} |
+| Warning {: .text-warning}  | <span class="gs">**Error, but system still runs**</span>    | <span class="ge">_On_</span>{: .badge .badge-success} |
+| Error {: .text-danger}     | <span class="gs">***Critical error, system halted***</span> | <span class="ge">_On_</span>{: .badge .badge-success} |
+</pre></div>
+
+
+<p>will get it rendered&nbsp;as:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Level</th>
+<th align="left">Description</th>
+<th align="right">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Debug</td>
+<td align="left">All information</td>
+<td align="right"><em class="badge badge-danger">Off</em></td>
+</tr>
+<tr>
+<td align="left" class="text-info">Info </td>
+<td align="left">Useful infomation</td>
+<td align="right"><em class="badge badge-danger">Off</em></td>
+</tr>
+<tr>
+<td align="left" class="text-warning">Warning </td>
+<td align="left"><strong>Error, but system still runs</strong></td>
+<td align="right"><em class="badge badge-success">On</em></td>
+</tr>
+<tr>
+<td align="left" class="text-danger">Error </td>
+<td align="left"><strong><em>Critical error, system halted</em></strong></td>
+<td align="right"><em class="badge badge-success">On</em></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="admonition">Admonition</h3>
+<p>If you use <code>admonition</code> extension, the below text will change to a box with title and&nbsp;text</p>
+<p>!!! note &#8220;How to use Admonition&#8221;<br>
+    Add <code>markdown.extensions.admonition</code> into your <a href="#markdown-settings">Markdown extension settings</a> <br>
+    Add <span class="caps">CCS</span> file for Admonition&nbsp;styles.</p>
+<hr>
+<h3 id="sane-list">Sane&nbsp;List</h3>
+<p>Lists will not mixed thanks to <code>markdown.extensions.sane_lists</code> extension.<br>
+Use <code>legacy_attrs</code> or <code>attr_list</code> to format list&nbsp;items.</p>
+<div class="highlight"><pre><span></span><span class="k">1.</span> First item
+{: .text-primary}
+<span class="k">2.</span> Second item
+{class=text-success}
+
+<span class="k">-</span> a new list
+{: .text-primary}
+<span class="k">-</span> not mixed
+{style=color:red}
+</pre></div>
+
+
+<ol>
+<li class="text-primary">First item<br></li>
+<li class="text-success">Second item<br></li>
+</ol>
+<ul>
+<li class="text-primary">a new list<br></li>
+<li style="color:red">not mixed<br></li>
+</ul>
+<hr>
+<h3 id="dictionary">Dictionary</h3>
+<p>A definition list can be render using <code>markdown.extensions.def_list</code> extension.</p>
+<div class="highlight"><pre><span></span>Apple
+:   Pomaceous fruit of plants of the genus Malus in the family Rosaceae.
+
+Orange
+:   The fruit of an evergreen tree of the genus Citrus.
+</pre></div>
+
+
+<dl>
+<dt>Apple</dt>
+<dd>Pomaceous fruit of plants of the genus Malus in the family&nbsp;Rosaceae.</dd>
+<dt>Orange</dt>
+<dd>The fruit of an evergreen tree of the genus&nbsp;Citrus.</dd>
+</dl>
+<hr>
+<h3 id="footnotes">Footnotes</h3>
+<p>Footnotes<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> have a label<sup id="fnref:xyz"><a class="footnote-ref" href="#fn:xyz">2</a></sup> and the footnote&#8217;s&nbsp;content.</p>
+<hr>
+<h3 id="new-line-to-break">New-Line-to-Break</h3>
+<p>Add <code>markdown.extensions.nl2br</code> into your <a href="#markdown-settings">Markdown extension settings</a>.<br>
+This causes newlines to be treated as hard breaks, like StackOverflow and GitHub flavored Markdown do.<br>
+If this extension is not used, these 3 lines will become one line in <span class="caps">HTML</span>.</p>
+<hr>
+<h3 id="checklist">Checklist</h3>
+<p>To show a list with checkbox, install <a href="https://github.com/FND/markdown-checklist"><code>markdown_checklist</code></a> extension and enable it in Markdown extensions list.<br>
+The list item indicators still show, so add some <code>CSS</code> style to hide&nbsp;them.</p>
+<div class="highlight"><pre><span></span><span class="nt">ul</span><span class="p">.</span><span class="nc">checklist</span> <span class="p">{</span>
+    <span class="k">list-style-type</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="k">padding-left</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Finally, a task list looks like&nbsp;below:</p>
+<div class="highlight"><pre><span></span><span class="k">- [ ]</span> foo
+<span class="k">- [x]</span> bar
+<span class="k">- [ ]</span> baz
+</pre></div>
+
+
+<ul class="checklist">
+<li><input type="checkbox" disabled>&nbsp;foo</li>
+<li><input type="checkbox" disabled checked>&nbsp;bar</li>
+<li><input type="checkbox" disabled>&nbsp;baz</li>
+</ul>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>This is a footnote content.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:xyz">
+<p>A footnote on the label <strong>xyz</strong>.&#160;<a class="footnote-backref" href="#fnref:xyz" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+                <!-- Neighbors -->
+                    <br>
+                    <b>Read more:</b><br>
+<div class="pagination">
+    <a class="w-100" href="https://vuquangtrong.github.io/simplify-theme/blog/simplify-theme.html">
+Simplify&nbsp;Theme
+    </a>
+</div>
+                <!-- Google Adsense -->
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-2 d-none d-md-block small">
+                <div class="sticky-top">
+                    <!-- ToC -->
+                    <nav id="toc" data-toggle="toc" ></nav>
+
+                    <!-- Share post -->
+
+                    <!-- Google Adsense -->
+                </div>
+            </div>
+        </div>
+
+    <!-- Releated posts -->
+        <hr>
+        <div>
+            <h5>Related posts:</h5>
+            <ul>
+                <li><a href="https://vuquangtrong.github.io/simplify-theme/blog/simplify-theme.html">Simplify&nbsp;Theme</a></li>
+                <li><a href="https://vuquangtrong.github.io/simplify-theme/blog/setup-blog-with-bootstrap-and-pelican.html">Setup blog with Bootstrap and&nbsp;Pelican</a></li>
+            </ul>
+        </div>
+
+    <!-- Comments -->
+        <hr>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vuquangtrong-github-io';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                </div>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="flex-shrink-0 bg-dark text-light small py-1">
+        <div class="container text-center">
+            &copy; 2019 <a href="https://vuquangtrong.github.io/simplify-theme">Simplify</a> by <a href="https://vuquangtrong.github.io/simplify-theme/pages/about.html">vuquangtrong</a>. Powered by <a href="http://getpelican.com">Pelican</a>, <a href="http://python.org">Python</a>, <a href="https://getbootstrap.com">Bootstrap 4</a><br>
+            <!-- Do not remove below license sentence -->
+            License: <a href="https://spdx.org/licenses/CC-BY-4.0.html">CC-BY-4.0</a>, based on <a href="https://github.com/vuquangtrong/simplify-theme">Simplify Bootstrap Theme</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!--
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    -->
+    <script type="text/javascript" src="https://vuquangtrong.github.io/simplify-theme/theme/jquery/jquery-3.4.1.min.js"></script>
+    <!--
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/bootstrap.min.js"></script>
+    -->
+    <script type="text/javascript" src="https://vuquangtrong.github.io/simplify-theme/theme/bootstrap/bootstrap.min.js"></script>
+    <!--
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    -->
+        <script type="text/javascript" src="https://vuquangtrong.github.io/simplify-theme/theme/extra/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="https://vuquangtrong.github.io/simplify-theme/theme/style.js"></script>
+
+    <!-- Sharing -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d9ffca0db80069e"></script>
+
+    <!-- JSON LD -->
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Simplify Article",
+    "headline": "Simplify Article",
+    "datePublished": "2019-10-08 10:00:00+07:00",
+    "dateModified": "2019-10-10 20:00:00+07:00",
+    "author": {
+        "@type": "Person",
+        "name": "vuquangtrong",
+        "url": "https://vuquangtrong.github.io/simplify-theme/author/vuquangtrong.html"
+    },
+    "image": "https://vuquangtrong.github.io/simplify-theme/logo.png",
+    "url": "https://vuquangtrong.github.io/simplify-theme/blog/simplify-article.html",
+    "description": "Show how an article is rendered by Markdown"
+}
+</script>
+    <!-- Disqus count -->
+</body>
+
+</html>

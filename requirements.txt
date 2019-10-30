@@ -1,0 +1,6 @@
+pelican
+markdown
+beautifulsoup4
+typogrify
+markdown-captions
+markdown-checklist

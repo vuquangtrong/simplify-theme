@@ -96,10 +96,10 @@
         {% endif %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/pygment/friendly.min.css">
         <!--
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/extra/admonition.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/extra/admonition.min.css">
         -->
         {% if page_name == 'search' %}
-            <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.css">
+            <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.css">
         {% endif %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/style.css">
 
@@ -268,7 +268,7 @@
                     <!-- Sharing -->
                     {% block add_this %}
                     {% if ADD_THIS_ID and (page_name or page or article) %}
-                        <div class="text-right mb-2 small">
+                        <div class="text-right mb-2 small" style="height: 26px">
                             <div class="addthis_inline_share_toolbox"></div>
                         </div>
                     {% endif %}
@@ -289,7 +289,7 @@
         <div class="container text-center">
             &copy; {{ COPYRIGHT_YEAR }} <a href="{{ SITEURL}}">{{ SITENAME }}</a> by <a href="{{ SITEURL }}/pages/about.html">{{ AUTHOR }}</a>. Powered by <a href="http://getpelican.com">Pelican</a>, <a href="http://python.org">Python</a>, <a href="https://getbootstrap.com">Bootstrap 4</a><br>
             <!-- Do not remove below license sentence -->
-            License: <a href="https://spdx.org/licenses/CC-BY-4.0.html">CC-BY-4.0</a>, based on <a href="https://github.com/vuquangtrong/simplify-bootstrap-theme">Simplify Bootstrap Theme</a>
+            License: <a href="https://spdx.org/licenses/CC-BY-4.0.html">CC-BY-4.0</a>, based on <a href="https://github.com/vuquangtrong/simplify-theme">Simplify Bootstrap Theme</a>
         </div>
     </footer>
 
@@ -310,7 +310,7 @@
     {% endif %}
     {% if page_name == 'search' %}
         <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.js"></script>
-        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch_set.js"></script>
+        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.cfg.js"></script>
         <script src="{{ SITEURL }}//tipuesearch_content.js"></script>
         <script>
             $(document).ready(function() {

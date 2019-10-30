@@ -12,7 +12,7 @@
             </div>
             <div class="col-4 small" style="margin-top: 0.5rem;">
                 {% if ADD_THIS_ID and (page_name or page or article) %}
-                    <div class="text-right mb-2 small">
+                    <div class="text-right mb-2 small" style="height: 26px">
                         <div class="addthis_inline_share_toolbox"></div>
                     </div>
                 {% endif %}
@@ -36,35 +36,31 @@
 	</div>
     -->
 
-    <div class="row">
-        <div class="col-lg-9 mx-auto">
-            <!-- Accordion -->
-            <div id="accordionList" class="accordion shadow">
-                {% for category, articles in categories|sort %}
-                    <!-- Accordion items -->
-                    <div class="card">
-                        <div id="heading_{{ category|lower }}" class="card-header bg-white shadow-sm border-0">
-                            <h2 class="mb-0">
-                                <button type="button" data-toggle="collapse" data-target="#collapse{{ category|lower }}" aria-expanded="false" aria-controls="collapse{{ category|lower }}" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
-                                    {{ category|lower }}  <span class="badge badge-warning" style="font-size: small;">{{ articles|count }}</span>
-                                </button>
-                            </h2>
-                        </div>
-                        <!-- Item list -->
-                        <div id="collapse{{ category|lower }}" aria-labelledby="heading_{{ category|lower }}" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
-                            {% for article in articles %}
-                            <div class="card-body border-bottom">
-                                <a  class="m-0" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a><br>
-                                <span class="small">by <a href="{{ SITEURL }}/{{ article.author.url }}" style="color: darkblue;">{{ article.author }}</a>, post on <span class="text-success">{{ article.locale_date }}</span></span>
-                            </div>
-                            {% endfor %}
-                        </div>
+    <!-- Accordion -->
+    <div id="accordionList" class="accordion shadow">
+        {% for category, articles in categories|sort %}
+            <!-- Accordion items -->
+            <div class="card">
+                <div id="heading_{{ category|lower }}" class="card-header bg-white shadow-sm border-0">
+                    <h2 class="mb-0">
+                        <button type="button" data-toggle="collapse" data-target="#collapse{{ category|lower }}" aria-expanded="false" aria-controls="collapse{{ category|lower }}" class="btn btn-link text-dark font-weight-bold collapsible-link collapsed">
+                            {{ category|lower }}  <span class="badge badge-warning" style="font-size: small;">{{ articles|count }}</span>
+                        </button>
+                    </h2>
+                </div>
+                <!-- Item list -->
+                <div id="collapse{{ category|lower }}" aria-labelledby="heading_{{ category|lower }}" data-parent="#accordionList" class="collapse" style="background-color: whitesmoke">
+                    {% for article in articles %}
+                    <div class="card-body border-bottom">
+                        <a  class="m-0" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a><br>
+                        <span class="small">by <a href="{{ SITEURL }}/{{ article.author.url }}" style="color: darkblue;">{{ article.author }}</a>, post on <span class="text-success">{{ article.locale_date }}</span></span>
                     </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
-
+    
     <!-- Google Adsense -->
     {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.page %}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
