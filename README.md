@@ -4,7 +4,7 @@ You can use this theme to host programming articles, journals, or galeries.
 
 ### Live Demo
 
-Visit the live blog of the theme creator's blog: <https://vuquangtrong.github.io> to see theme in action, which is also has some articles about theme's documents.  
+Visit the live blog of the theme creator's blog: <https://vuquangtrong.github.io/simplify-theme> to see theme in action, which is also has some articles about theme's documents.  
 Source code is at [simplify-theme](https://github.com/vuquangtrong/simplify-theme)
 
 ### Features
@@ -61,7 +61,7 @@ By default Pelican enables below extensions to process your markdown files:
 ### Customized styles
 
 The theme also bring to you a clean, simple, but contenful layout.  
-This [Simplify Article](https://vuquangtrong.github.io/blog/simplify-article.html) will guide you how to write content in markdown and how it will be rendered on your page.
+This [Simplify Article](https://vuquangtrong.github.io/simplify-theme/blog/simplify-article.html) will guide you how to write content in markdown and how it will be rendered on your page.
 
 ### Preview
 
