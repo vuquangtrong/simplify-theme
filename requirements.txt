@@ -4,3 +4,10 @@ beautifulsoup4
 typogrify
 markdown-captions
 markdown-checklist
+pelican-sitemap
+pelican-related_posts
+pelican-neighbors
+pelican-share_post
+pelican-tag_cloud
+minchin.pelican.plugins.post_stats
+git+https://github.com/getpelican/pelican-plugins/#egg=pelican-tipue-search&subdirectory=tipue_search

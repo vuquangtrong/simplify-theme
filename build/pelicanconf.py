@@ -78,13 +78,14 @@ STATIC_PATHS = [
 ]
 
 # Plugins
-PLUGIN_PATHS = [
-    '../../pelican-plugins'
-]
+# since version 4.5, plugins are installed as python packages, refer to requirements.txt
+# PLUGIN_PATHS = [
+#     '../../pelican-plugins'
+# ]
 
 PLUGINS = [
     'sitemap', # generate sitemap document, see <https://www.sitemaps.org>
-    'post_stats', # generate post statistics
+    'minchin.pelican.plugins.post_stats', # generate post statistics
     'related_posts', # find articles those share common tags
     'neighbors', # find next, previous article 
     'share_post', # static sharing buttons

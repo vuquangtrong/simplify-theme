@@ -26,6 +26,16 @@ Source code is at [simplify-theme](https://github.com/vuquangtrong/simplify-them
 Download the theme from [simplify-theme](https://github.com/vuquangtrong/simplify-theme) or from [pelican-themes](https://github.com/getpelican/pelican-themes).  
 You may need to check the included example `pelicanconf.py` and `publishconf.py` for more information.
 
+__PLUGINS NOTE__
+
+Starting with version 4.5, Pelican moved to a new plugin structure utilizing namespace packages that can be easily installed via Pip. Plugins supporting this structure will install under the namespace package pelican.plugins and can be automatically discovered by Pelican. To see a list of Pip-installed namespace plugins that are active in your environment, run:
+
+```
+pelican-plugins
+```
+
+The list of necessary plugins is now in the `requirements.txt` file, and enabled in `PLUGINS` variable in `pelicanconf.py`
+
 ### Integrations
 
 - [AddThis](http://www.addthis.com/): add sharing buttons
